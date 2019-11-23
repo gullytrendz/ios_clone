@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		308AEB3E80D05080B61EA58A /* Pods_GullyTrends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E246F74649B94FCE736ED55E /* Pods_GullyTrends.framework */; };
+		71852C462374871B00AFBD8A /* iphonexsmax_splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 71852C452374871B00AFBD8A /* iphonexsmax_splash.png */; };
+		71852C49237489B900AFBD8A /* checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71852C47237489B800AFBD8A /* checked@3x.png */; };
+		71852C4A237489B900AFBD8A /* checked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71852C48237489B800AFBD8A /* checked@2x.png */; };
+		71852C4D23748B1E00AFBD8A /* unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71852C4B23748B1D00AFBD8A /* unchecked@2x.png */; };
+		71852C4E23748B1E00AFBD8A /* unchecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71852C4C23748B1E00AFBD8A /* unchecked@3x.png */; };
+		71BA3768236E0E9100D072EA /* blank-screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71BA3767236E0E9100D072EA /* blank-screen.jpg */; };
+		71C3EC242369BE6E00206690 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC232369BE6E00206690 /* AppDelegate.m */; };
+		71C3EC272369BE6E00206690 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC262369BE6E00206690 /* SceneDelegate.m */; };
+		71C3EC2A2369BE6E00206690 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC292369BE6E00206690 /* ViewController.m */; };
+		71C3EC2D2369BE6E00206690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C3EC2B2369BE6E00206690 /* Main.storyboard */; };
+		71C3EC2F2369BE6E00206690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C3EC2E2369BE6E00206690 /* Assets.xcassets */; };
+		71C3EC322369BE6E00206690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C3EC302369BE6E00206690 /* LaunchScreen.storyboard */; };
+		71C3EC352369BE6E00206690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC342369BE6E00206690 /* main.m */; };
+		71C3EC442369BF3200206690 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC3D2369BF3100206690 /* PhotoViewController.m */; };
+		71C3EC452369BF3200206690 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC3E2369BF3100206690 /* SidebarTableViewController.m */; };
+		71C3EC462369BF3200206690 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC402369BF3100206690 /* MainViewController.m */; };
+		71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC492369BF4B00206690 /* SWRevealViewController.m */; };
+		71C3EC4E2369C4FF00206690 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC4D2369C4FF00206690 /* ARViewController.m */; };
+		71F2C3F3236FCB2A00AA253C /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71F2C3F0236FCB2A00AA253C /* GoogleSignIn.bundle */; };
+		71F2C3F4236FCB2A00AA253C /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3F1236FCB2A00AA253C /* GoogleSignInDependencies.framework */; };
+		71F2C3F5236FCB2A00AA253C /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3F2236FCB2A00AA253C /* GoogleSignIn.framework */; };
+		71F2C3F7236FCB5000AA253C /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3F6236FCB5000AA253C /* LocalAuthentication.framework */; };
+		71F2C3F9236FCB5600AA253C /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3F8236FCB5600AA253C /* SafariServices.framework */; };
+		71F2C3FB236FCB6800AA253C /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3FA236FCB6800AA253C /* AuthenticationServices.framework */; };
+		71F2C3FD236FCB7000AA253C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */; };
+		71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F2C403236FCED900AA253C /* SharedInstanceModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		66BAFE83D650D5AD348E06F7 /* Pods-GullyTrends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GullyTrends.release.xcconfig"; path = "Target Support Files/Pods-GullyTrends/Pods-GullyTrends.release.xcconfig"; sourceTree = "<group>"; };
+		6D7C2C7D2282AD34B2338036 /* Pods-GullyTrends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GullyTrends.debug.xcconfig"; path = "Target Support Files/Pods-GullyTrends/Pods-GullyTrends.debug.xcconfig"; sourceTree = "<group>"; };
+		71852C452374871B00AFBD8A /* iphonexsmax_splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iphonexsmax_splash.png; sourceTree = "<group>"; };
+		71852C47237489B800AFBD8A /* checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checked@3x.png"; sourceTree = "<group>"; };
+		71852C48237489B800AFBD8A /* checked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checked@2x.png"; sourceTree = "<group>"; };
+		71852C4B23748B1D00AFBD8A /* unchecked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unchecked@2x.png"; sourceTree = "<group>"; };
+		71852C4C23748B1E00AFBD8A /* unchecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unchecked@3x.png"; sourceTree = "<group>"; };
+		71BA3767236E0E9100D072EA /* blank-screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-screen.jpg"; sourceTree = "<group>"; };
+		71C3EC1F2369BE6E00206690 /* GullyTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GullyTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71C3EC222369BE6E00206690 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		71C3EC232369BE6E00206690 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		71C3EC252369BE6E00206690 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		71C3EC262369BE6E00206690 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		71C3EC282369BE6E00206690 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		71C3EC292369BE6E00206690 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		71C3EC2C2369BE6E00206690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71C3EC2E2369BE6E00206690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71C3EC312369BE6E00206690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		71C3EC332369BE6E00206690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71C3EC342369BE6E00206690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71C3EC3D2369BF3100206690 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		71C3EC3E2369BF3100206690 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
+		71C3EC3F2369BF3100206690 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		71C3EC402369BF3100206690 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		71C3EC412369BF3100206690 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		71C3EC422369BF3100206690 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
+		71C3EC482369BF4B00206690 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = GullyTrends/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
+		71C3EC492369BF4B00206690 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = GullyTrends/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
+		71C3EC4C2369C4FF00206690 /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		71C3EC4D2369C4FF00206690 /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		71F2C3F0236FCB2A00AA253C /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		71F2C3F1236FCB2A00AA253C /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
+		71F2C3F2236FCB2A00AA253C /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		71F2C3F6236FCB5000AA253C /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		71F2C3F8236FCB5600AA253C /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		71F2C3FA236FCB6800AA253C /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		71F2C402236FCED900AA253C /* SharedInstanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedInstanceModel.h; sourceTree = "<group>"; };
+		71F2C403236FCED900AA253C /* SharedInstanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedInstanceModel.m; sourceTree = "<group>"; };
+		E246F74649B94FCE736ED55E /* Pods_GullyTrends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GullyTrends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71C3EC1C2369BE6E00206690 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71F2C3FB236FCB6800AA253C /* AuthenticationServices.framework in Frameworks */,
+				71F2C3FD236FCB7000AA253C /* SystemConfiguration.framework in Frameworks */,
+				71F2C3F7236FCB5000AA253C /* LocalAuthentication.framework in Frameworks */,
+				71F2C3F4236FCB2A00AA253C /* GoogleSignInDependencies.framework in Frameworks */,
+				71F2C3F5236FCB2A00AA253C /* GoogleSignIn.framework in Frameworks */,
+				308AEB3E80D05080B61EA58A /* Pods_GullyTrends.framework in Frameworks */,
+				71F2C3F9236FCB5600AA253C /* SafariServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17EFD331A3C03BA97667C162 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D7C2C7D2282AD34B2338036 /* Pods-GullyTrends.debug.xcconfig */,
+				66BAFE83D650D5AD348E06F7 /* Pods-GullyTrends.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5BBBABA3C22E6BC8559B4CD0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */,
+				71F2C3FA236FCB6800AA253C /* AuthenticationServices.framework */,
+				71F2C3F8236FCB5600AA253C /* SafariServices.framework */,
+				71F2C3F6236FCB5000AA253C /* LocalAuthentication.framework */,
+				E246F74649B94FCE736ED55E /* Pods_GullyTrends.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71852C4F237500C700AFBD8A /* ExternalAssets */ = {
+			isa = PBXGroup;
+			children = (
+				71852C452374871B00AFBD8A /* iphonexsmax_splash.png */,
+				71852C4B23748B1D00AFBD8A /* unchecked@2x.png */,
+				71852C4C23748B1E00AFBD8A /* unchecked@3x.png */,
+				71852C48237489B800AFBD8A /* checked@2x.png */,
+				71852C47237489B800AFBD8A /* checked@3x.png */,
+			);
+			name = ExternalAssets;
+			sourceTree = "<group>";
+		};
+		71C3EC162369BE6E00206690 = {
+			isa = PBXGroup;
+			children = (
+				71852C4F237500C700AFBD8A /* ExternalAssets */,
+				71C3EC212369BE6E00206690 /* GullyTrends */,
+				71C3EC202369BE6E00206690 /* Products */,
+				17EFD331A3C03BA97667C162 /* Pods */,
+				5BBBABA3C22E6BC8559B4CD0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		71C3EC202369BE6E00206690 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EC1F2369BE6E00206690 /* GullyTrends.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71C3EC212369BE6E00206690 /* GullyTrends */ = {
+			isa = PBXGroup;
+			children = (
+				71F2C3FF236FCE4000AA253C /* Model */,
+				71F2C3FE236FCE1A00AA253C /* ViewControllers */,
+				71F2C3EF236FCB2A00AA253C /* GoogleSignin */,
+				71C3EC4B2369BF6300206690 /* AppDelegate */,
+				71C3EC472369BF3700206690 /* SideBar */,
+				71C3EC2B2369BE6E00206690 /* Main.storyboard */,
+				71C3EC2E2369BE6E00206690 /* Assets.xcassets */,
+				71C3EC302369BE6E00206690 /* LaunchScreen.storyboard */,
+				71C3EC332369BE6E00206690 /* Info.plist */,
+				71C3EC342369BE6E00206690 /* main.m */,
+			);
+			path = GullyTrends;
+			sourceTree = "<group>";
+		};
+		71C3EC472369BF3700206690 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EC482369BF4B00206690 /* SWRevealViewController.h */,
+				71C3EC492369BF4B00206690 /* SWRevealViewController.m */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		71C3EC4B2369BF6300206690 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EC222369BE6E00206690 /* AppDelegate.h */,
+				71C3EC232369BE6E00206690 /* AppDelegate.m */,
+				71C3EC252369BE6E00206690 /* SceneDelegate.h */,
+				71C3EC262369BE6E00206690 /* SceneDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		71D861DA23890C1A0069E097 /* ARViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EC4C2369C4FF00206690 /* ARViewController.h */,
+				71C3EC4D2369C4FF00206690 /* ARViewController.m */,
+			);
+			path = ARViewController;
+			sourceTree = "<group>";
+		};
+		71D861DB23890C440069E097 /* PhotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EC412369BF3100206690 /* PhotoViewController.h */,
+				71C3EC3D2369BF3100206690 /* PhotoViewController.m */,
+			);
+			path = PhotoViewController;
+			sourceTree = "<group>";
+		};
+		71D861DC23890C960069E097 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EC3F2369BF3100206690 /* MainViewController.h */,
+				71C3EC402369BF3100206690 /* MainViewController.m */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		71D861DD23890CB90069E097 /* SidebarTableViewController.m */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EC422369BF3100206690 /* SidebarTableViewController.h */,
+				71C3EC3E2369BF3100206690 /* SidebarTableViewController.m */,
+			);
+			path = SidebarTableViewController.m;
+			sourceTree = "<group>";
+		};
+		71D861DE23890D0D0069E097 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				71C3EC282369BE6E00206690 /* ViewController.h */,
+				71C3EC292369BE6E00206690 /* ViewController.m */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		71F2C3EF236FCB2A00AA253C /* GoogleSignin */ = {
+			isa = PBXGroup;
+			children = (
+				71BA3767236E0E9100D072EA /* blank-screen.jpg */,
+				71F2C3F0236FCB2A00AA253C /* GoogleSignIn.bundle */,
+				71F2C3F1236FCB2A00AA253C /* GoogleSignInDependencies.framework */,
+				71F2C3F2236FCB2A00AA253C /* GoogleSignIn.framework */,
+			);
+			path = GoogleSignin;
+			sourceTree = "<group>";
+		};
+		71F2C3FE236FCE1A00AA253C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				71D861DC23890C960069E097 /* HomeViewController */,
+				71D861DB23890C440069E097 /* PhotoViewController */,
+				71D861DD23890CB90069E097 /* SidebarTableViewController.m */,
+				71D861DE23890D0D0069E097 /* LoginViewController */,
+				71D861DA23890C1A0069E097 /* ARViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		71F2C3FF236FCE4000AA253C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71F2C402236FCED900AA253C /* SharedInstanceModel.h */,
+				71F2C403236FCED900AA253C /* SharedInstanceModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71C3EC1E2369BE6E00206690 /* GullyTrends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71C3EC382369BE6E00206690 /* Build configuration list for PBXNativeTarget "GullyTrends" */;
+			buildPhases = (
+				7D258ABC67E5ABAE3491EDD3 /* [CP] Check Pods Manifest.lock */,
+				71C3EC1B2369BE6E00206690 /* Sources */,
+				71C3EC1C2369BE6E00206690 /* Frameworks */,
+				71C3EC1D2369BE6E00206690 /* Resources */,
+				43EC4A18761D554C4F6DD32E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GullyTrends;
+			productName = GullyTrends;
+			productReference = 71C3EC1F2369BE6E00206690 /* GullyTrends.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71C3EC172369BE6E00206690 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Lakshmi Vajrapu";
+				TargetAttributes = {
+					71C3EC1E2369BE6E00206690 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 71C3EC1A2369BE6E00206690 /* Build configuration list for PBXProject "GullyTrends" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71C3EC162369BE6E00206690;
+			productRefGroup = 71C3EC202369BE6E00206690 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71C3EC1E2369BE6E00206690 /* GullyTrends */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71C3EC1D2369BE6E00206690 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71BA3768236E0E9100D072EA /* blank-screen.jpg in Resources */,
+				71F2C3F3236FCB2A00AA253C /* GoogleSignIn.bundle in Resources */,
+				71852C4E23748B1E00AFBD8A /* unchecked@3x.png in Resources */,
+				71852C4A237489B900AFBD8A /* checked@2x.png in Resources */,
+				71852C4D23748B1E00AFBD8A /* unchecked@2x.png in Resources */,
+				71C3EC322369BE6E00206690 /* LaunchScreen.storyboard in Resources */,
+				71C3EC2F2369BE6E00206690 /* Assets.xcassets in Resources */,
+				71C3EC2D2369BE6E00206690 /* Main.storyboard in Resources */,
+				71852C462374871B00AFBD8A /* iphonexsmax_splash.png in Resources */,
+				71852C49237489B900AFBD8A /* checked@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43EC4A18761D554C4F6DD32E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GullyTrends/Pods-GullyTrends-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GullyTrends/Pods-GullyTrends-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GullyTrends/Pods-GullyTrends-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D258ABC67E5ABAE3491EDD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GullyTrends-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71C3EC1B2369BE6E00206690 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71C3EC2A2369BE6E00206690 /* ViewController.m in Sources */,
+				71C3EC242369BE6E00206690 /* AppDelegate.m in Sources */,
+				71C3EC462369BF3200206690 /* MainViewController.m in Sources */,
+				71C3EC442369BF3200206690 /* PhotoViewController.m in Sources */,
+				71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */,
+				71C3EC352369BE6E00206690 /* main.m in Sources */,
+				71C3EC272369BE6E00206690 /* SceneDelegate.m in Sources */,
+				71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */,
+				71C3EC452369BF3200206690 /* SidebarTableViewController.m in Sources */,
+				71C3EC4E2369C4FF00206690 /* ARViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		71C3EC2B2369BE6E00206690 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71C3EC2C2369BE6E00206690 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71C3EC302369BE6E00206690 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71C3EC312369BE6E00206690 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71C3EC362369BE6E00206690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		71C3EC372369BE6E00206690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71C3EC392369BE6E00206690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D7C2C7D2282AD34B2338036 /* Pods-GullyTrends.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53LVKZZYYY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GullyTrends/GoogleSignin",
+				);
+				INFOPLIST_FILE = GullyTrends/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"Parse\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fashion.gullytrends;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71C3EC3A2369BE6E00206690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66BAFE83D650D5AD348E06F7 /* Pods-GullyTrends.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 53LVKZZYYY;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GullyTrends/GoogleSignin",
+				);
+				INFOPLIST_FILE = GullyTrends/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"Bolts\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"FBSDKCoreKit\"",
+					"-framework",
+					"\"FBSDKLoginKit\"",
+					"-framework",
+					"\"Parse\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-weak_framework",
+					"\"Accounts\"",
+					"-weak_framework",
+					"\"AudioToolbox\"",
+					"-weak_framework",
+					"\"CoreGraphics\"",
+					"-weak_framework",
+					"\"CoreLocation\"",
+					"-weak_framework",
+					"\"Foundation\"",
+					"-weak_framework",
+					"\"QuartzCore\"",
+					"-weak_framework",
+					"\"Security\"",
+					"-weak_framework",
+					"\"Social\"",
+					"-weak_framework",
+					"\"UIKit\"",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fashion.gullytrends;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71C3EC1A2369BE6E00206690 /* Build configuration list for PBXProject "GullyTrends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C3EC362369BE6E00206690 /* Debug */,
+				71C3EC372369BE6E00206690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71C3EC382369BE6E00206690 /* Build configuration list for PBXNativeTarget "GullyTrends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71C3EC392369BE6E00206690 /* Debug */,
+				71C3EC3A2369BE6E00206690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71C3EC172369BE6E00206690 /* Project object */;
+}
