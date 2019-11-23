@@ -1,13 +1,14 @@
 //
 //  MainViewController.m
-//  SidebarDemo
+//  GullyTrends
 //
-//  Created by Lakshmi Vajrapu on 10/11/14.
-//  Copyright (c) 2019 Lakshmi Vajrapu. All rights reserved.
+//  Created by Lakshmi Vajrapu on 30/10/19.
+//  Copyright © 2019 Lakshmi Vajrapu. All rights reserved.
 //
 
 #import "MainViewController.h"
 #import "SWRevealViewController.h"
+#import "CustomView.h"
 
 @interface MainViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (strong) NSArray *sectionimages;
@@ -31,7 +32,7 @@
     }
     self.sectionimages = @[ @"Unisexgarments", @"onlineclothing",@"best-kids-clothing",  @"Unisexgarments",@"onlineclothing",@"best-kids-clothing"];
 
-    
+
 }
 -(void)viewWillAppear:(BOOL)animated{
     UIImageView *imageview=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
@@ -61,7 +62,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 281.0;
+    return 200.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -74,10 +75,9 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MyCell"];
     }
 
-    cell.imageView.image = [UIImage imageNamed:[self.sectionimages objectAtIndex:indexPath.row]];
-
+ // cell.imageView.image = [UIImage imageNamed:[self.sectionimages objectAtIndex:indexPath.row]];
+  
     return cell;
 }
-
 
 @end

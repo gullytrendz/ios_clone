@@ -26,6 +26,7 @@
 		71C3EC462369BF3200206690 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC402369BF3100206690 /* MainViewController.m */; };
 		71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC492369BF4B00206690 /* SWRevealViewController.m */; };
 		71C3EC4E2369C4FF00206690 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC4D2369C4FF00206690 /* ARViewController.m */; };
+		71E860102389C1C000D60A38 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E8600E2389C1C000D60A38 /* CustomView.m */; };
 		71F2C3F3236FCB2A00AA253C /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71F2C3F0236FCB2A00AA253C /* GoogleSignIn.bundle */; };
 		71F2C3F4236FCB2A00AA253C /* GoogleSignInDependencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3F1236FCB2A00AA253C /* GoogleSignInDependencies.framework */; };
 		71F2C3F5236FCB2A00AA253C /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3F2236FCB2A00AA253C /* GoogleSignIn.framework */; };
@@ -67,6 +68,8 @@
 		71C3EC492369BF4B00206690 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = GullyTrends/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
 		71C3EC4C2369C4FF00206690 /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
 		71C3EC4D2369C4FF00206690 /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		71E8600E2389C1C000D60A38 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		71E8600F2389C1C000D60A38 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		71F2C3F0236FCB2A00AA253C /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
 		71F2C3F1236FCB2A00AA253C /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
 		71F2C3F2236FCB2A00AA253C /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		71C3EC212369BE6E00206690 /* GullyTrends */ = {
 			isa = PBXGroup;
 			children = (
+				71E8600D2389B5F300D60A38 /* CustomClass */,
 				71F2C3FF236FCE4000AA253C /* Model */,
 				71F2C3FE236FCE1A00AA253C /* ViewControllers */,
 				71F2C3EF236FCB2A00AA253C /* GoogleSignin */,
@@ -229,6 +233,15 @@
 				71C3EC292369BE6E00206690 /* ViewController.m */,
 			);
 			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		71E8600D2389B5F300D60A38 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				71E8600F2389C1C000D60A38 /* CustomView.h */,
+				71E8600E2389C1C000D60A38 /* CustomView.m */,
+			);
+			path = CustomClass;
 			sourceTree = "<group>";
 		};
 		71F2C3EF236FCB2A00AA253C /* GoogleSignin */ = {
@@ -386,6 +399,7 @@
 			files = (
 				71C3EC2A2369BE6E00206690 /* ViewController.m in Sources */,
 				71C3EC242369BE6E00206690 /* AppDelegate.m in Sources */,
+				71E860102389C1C000D60A38 /* CustomView.m in Sources */,
 				71C3EC462369BF3200206690 /* MainViewController.m in Sources */,
 				71C3EC442369BF3200206690 /* PhotoViewController.m in Sources */,
 				71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */,

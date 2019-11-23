@@ -1,9 +1,9 @@
 //
 //  ViewController.m
-//  SidebarDemo
+//  GullyTrends
 //
-//  Created by Lakshmi Vajrapu on 9/11/14.
-//  Copyright (c) 2019 Lakshmi Vajrapu. All rights reserved.
+//  Created by Lakshmi Vajrapu on 30/10/19.
+//  Copyright © 2019 Lakshmi Vajrapu. All rights reserved.
 //
 
 #import "ViewController.h"
