@@ -29,6 +29,7 @@ static int const kHeaderSectionTag = 6900;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.sectionNames = @[ @"Men's", @"Women's", @"Kids",@"Designer Studios",@"Home Shopping", @"Sell On Gully", @"Buy Wholesale", @"Customer Care" ,@"Return Policy", @"FAQS", @"About & Policies"];
+    
     self.sectionimages = @[ @"mens-icon", @"womens-icon", @"kids-icon",@"designer-icon",@"menu_home-shopping",@"menu_sell-on-gully-icon",@"menu_buy-wholesale-icon"];
 
     self.sectionItems = @[ @[@"Shirts", @"T-Shirts", @"Jeans", @"Kurta"],
@@ -56,6 +57,8 @@ static int const kHeaderSectionTag = 6900;
     gradient.endPoint = CGPointMake(0, 1);
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor colorWithRed:80/255.0 green:24/255.0 blue:133/255.0 alpha:1.0] CGColor],(id)[[UIColor colorWithRed:14.0/255.0 green:27.0/255.0 blue:96/255.0 alpha:1.0] CGColor], nil];
    // [ self.view.layer addSublayer:gradient];
+    
+    //# Changed to insertlayer to fix the issue, after applying gradient labels got disappered.
     [self.view.layer insertSublayer:gradient atIndex:0];
 
 }
