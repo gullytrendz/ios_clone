@@ -20,9 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-   // self.title = @"Home";
-//    self.navigationItem.title = @"Gully Trends";
-
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
