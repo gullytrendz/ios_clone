@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-icons" translatesAutoresizingMaskIntoConstraints="NO" id="0jj-69-nuG">
-                                <rect key="frame" x="0.0" y="44" width="375" height="657"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="657.00000000000011"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hbC-sK-YYg">
                                 <rect key="frame" x="62.5" y="155" width="250" height="100"/>
@@ -236,48 +236,44 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept terms and Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dah-Xr-D2x">
-                                <rect key="frame" x="108" y="497" width="231" height="20.5"/>
+                                <rect key="frame" x="117" y="497" width="222" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nC-D7-2Ck">
-                                <rect key="frame" x="63" y="492" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="G7L-QN-oPr"/>
-                                    <constraint firstAttribute="width" constant="30" id="aJl-f2-15r"/>
-                                </constraints>
-                                <state key="normal" image="checked.png">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="checkBoxToggle:" destination="5Y3-1T-yqh" eventType="touchUpInside" id="uXl-Ao-Kgw"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTg-io-wen">
-                                <rect key="frame" x="267" y="619" width="72" height="30"/>
+                                <rect key="frame" x="280.5" y="627" width="58.5" height="22"/>
                                 <state key="normal" title="  Skip" image="skip-icon"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QKw-uP-Noc">
+                                <rect key="frame" x="77" y="492" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="wqP-dL-F7b"/>
+                                    <constraint firstAttribute="height" constant="30" id="xXS-LZ-S06"/>
+                                </constraints>
+                                <state key="normal" image="unchecked.png"/>
+                                <state key="selected" image="checked.png"/>
+                                <state key="highlighted" image="unchecked.png"/>
+                                <connections>
+                                    <action selector="checkBoxToggle:" destination="5Y3-1T-yqh" eventType="touchUpInside" id="yhW-W7-Xgg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Vjk-aZ-ooC" firstAttribute="top" secondItem="0nC-D7-2Ck" secondAttribute="bottom" constant="50" id="0gQ-dK-e9R"/>
                             <constraint firstItem="tTg-io-wen" firstAttribute="leading" relation="lessThanOrEqual" secondItem="FK2-r8-J9w" secondAttribute="leadingMargin" constant="280" id="4To-Vj-KiU"/>
-                            <constraint firstItem="0nC-D7-2Ck" firstAttribute="top" secondItem="YxY-tC-a02" secondAttribute="bottom" constant="25" id="6eo-Zc-sS0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dah-Xr-D2x" secondAttribute="trailing" constant="20" id="HKR-bc-Nnf"/>
+                            <constraint firstItem="dah-Xr-D2x" firstAttribute="leading" secondItem="QKw-uP-Noc" secondAttribute="trailing" constant="10" id="Ndt-AK-xar"/>
                             <constraint firstItem="dah-Xr-D2x" firstAttribute="top" secondItem="YxY-tC-a02" secondAttribute="bottom" constant="30" id="PHs-UE-Yz0"/>
+                            <constraint firstItem="Vjk-aZ-ooC" firstAttribute="top" secondItem="QKw-uP-Noc" secondAttribute="bottom" constant="50" id="WZj-ay-Xvw"/>
                             <constraint firstItem="ZIK-zX-NWO" firstAttribute="top" secondItem="tTg-io-wen" secondAttribute="bottom" constant="18" id="cjB-hD-AV7"/>
                             <constraint firstItem="YxY-tC-a02" firstAttribute="centerX" secondItem="FK2-r8-J9w" secondAttribute="centerX" id="eHl-wd-1SK"/>
                             <constraint firstItem="Vjk-aZ-ooC" firstAttribute="centerX" secondItem="FK2-r8-J9w" secondAttribute="centerX" id="gHA-UT-6yF"/>
-                            <constraint firstItem="dah-Xr-D2x" firstAttribute="leading" secondItem="0nC-D7-2Ck" secondAttribute="trailing" constant="15" id="hcK-vI-5XF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tTg-io-wen" secondAttribute="trailing" constant="20" id="hh5-3j-qQg"/>
-                            <constraint firstItem="0nC-D7-2Ck" firstAttribute="leading" secondItem="FK2-r8-J9w" secondAttribute="leading" constant="63" id="lRZ-J4-MFb"/>
+                            <constraint firstItem="QKw-uP-Noc" firstAttribute="top" secondItem="YxY-tC-a02" secondAttribute="bottom" constant="25" id="ncv-dc-KGR"/>
                             <constraint firstItem="YxY-tC-a02" firstAttribute="centerY" secondItem="FK2-r8-J9w" secondAttribute="centerY" multiplier="0.8" id="xwC-LH-rhU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a5a-rH-q4Z"/>
-                    <connections>
-                        <outlet property="myCheckBoxButton" destination="0nC-D7-2Ck" id="gRl-p1-KVE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t06-hT-FdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -591,6 +587,7 @@
         <image name="menu_wishlist-icon" width="18" height="24"/>
         <image name="sign-in-btn" width="222" height="54.5"/>
         <image name="skip-icon" width="13.5" height="15"/>
+        <image name="unchecked.png" width="24.5" height="24.5"/>
         <image name="user-icon" width="18" height="22.5"/>
     </resources>
     <inferredMetricsTieBreakers>

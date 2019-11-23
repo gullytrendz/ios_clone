@@ -39,7 +39,7 @@
 
 }
 - (IBAction)checkBoxToggle:(UIButton*)sender {
-    self.myCheckBoxButton.selected = !self.myCheckBoxButton.selected; // toggle the selected property, just a simple BOOL
+    sender.selected?(sender.selected=FALSE):(sender.selected=TRUE);
 }
 
 /*
