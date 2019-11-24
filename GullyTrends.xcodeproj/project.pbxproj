@@ -71,6 +71,7 @@
 		71C3EC4D2369C4FF00206690 /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
 		71E8600E2389C1C000D60A38 /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
 		71E8600F2389C1C000D60A38 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		71E86014238A6F2D00D60A38 /* UITextField+CustomTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+CustomTextField.h"; sourceTree = "<group>"; };
 		71F2C3F0236FCB2A00AA253C /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
 		71F2C3F1236FCB2A00AA253C /* GoogleSignInDependencies.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignInDependencies.framework; sourceTree = "<group>"; };
 		71F2C3F2236FCB2A00AA253C /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 			children = (
 				71E8600F2389C1C000D60A38 /* CustomView.h */,
 				71E8600E2389C1C000D60A38 /* CustomView.m */,
+				71E86014238A6F2D00D60A38 /* UITextField+CustomTextField.h */,
 			);
 			path = CustomClass;
 			sourceTree = "<group>";

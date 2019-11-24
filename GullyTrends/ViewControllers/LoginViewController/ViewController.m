@@ -11,10 +11,12 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 @import GoogleSignIn;
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
 @property(strong, nonatomic)  GIDSignInButton *signInButton;
+@property (strong, nonatomic) IBOutlet UITextField *UsernameTxt;
+@property (strong, nonatomic) IBOutlet UITextField *otpTxt;
 
 @end
 
@@ -24,18 +26,39 @@
     [super viewDidLoad];
 //    self.navigationItem.title = @"Gully Trends";
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
+    [self addrightView:@"mobile-icon" forTextField:self.UsernameTxt];
+    [self addrightView:@"lock-icon" forTextField:self.otpTxt];
 
 //    FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
 //    // Optional: Place the button in the center of your view.
 //    loginButton.center = self.view.center;
 //    [self.view addSubview:loginButton];
+    
     if ([FBSDKAccessToken currentAccessToken]) {
      // User is logged in, do work such as go to next view controller.
     }
+    
    [self applyGradientEffect];
     [self googlesignissetup];
-
+    
+    
 }
+
+-(void)addrightView:(NSString*)imagename forTextField:(UITextField *)sender{
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 15, 25)];
+
+    if ([imagename isEqualToString:@"lock-icon"]) {
+        imgView.frame=CGRectMake(0, 0, 15, 20);
+    }
+    imgView.image = [UIImage imageNamed:imagename];
+
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    [paddingView addSubview:imgView];
+    [sender setRightViewMode:UITextFieldViewModeAlways];
+    [sender setRightView:paddingView];
+}
+
+
 -(void)googlesignissetup{
     [GIDSignIn sharedInstance].presentingViewController = self;
     [[GIDSignIn sharedInstance] restorePreviousSignIn];
@@ -62,6 +85,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma arguments UITextField Delegates Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end

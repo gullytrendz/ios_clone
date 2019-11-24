@@ -70,6 +70,9 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="ZGd-E7-WUt" id="gnJ-7u-dEd"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dve-Eh-jAZ">
                                                         <rect key="frame" x="0.0" y="41" width="355" height="1"/>
@@ -86,7 +89,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-aj-dOJ">
                                                 <rect key="frame" x="0.0" y="57" width="355" height="42"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1s1-zg-u3b">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1s1-zg-u3b">
                                                         <rect key="frame" x="0.0" y="0.0" width="355" height="40"/>
                                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -95,6 +98,9 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="ZGd-E7-WUt" id="9xW-JW-xbw"/>
+                                                        </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duf-3j-MBQ">
                                                         <rect key="frame" x="0.0" y="41" width="355" height="1"/>
@@ -164,7 +170,7 @@
                                     <constraint firstAttribute="width" constant="150" id="RPW-o0-7Uz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
-                                <state key="normal" title="Re Send">
+                                <state key="normal" title="ReSend OTP">
                                     <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -189,7 +195,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="rOm-mG-bu2"/>
                     <connections>
+                        <outlet property="UsernameTxt" destination="Q86-xB-qFR" id="lcH-vk-9gg"/>
                         <outlet property="loginButton" destination="2gs-bq-NRi" id="l4o-Vl-KcZ"/>
+                        <outlet property="otpTxt" destination="1s1-zg-u3b" id="cPt-4f-OCi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Kn-xX-Dmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
