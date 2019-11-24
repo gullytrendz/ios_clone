@@ -16,7 +16,10 @@ static int const kHeaderSectionTag = 6900;
 @property (assign) UITableViewHeaderFooterView *expandedSectionHeader;
 @property (strong) NSArray *sectionItems;
 @property (strong) NSArray *sectionNames;
+@property (strong) NSArray *onlySectionmenuitems;
+
 @property (strong) NSArray *sectionimages;
+@property (strong) UILabel *pluisMinusLbl;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
@@ -37,6 +40,8 @@ static int const kHeaderSectionTag = 6900;
                            @[@"T Shirts", @"Jeans"],
                             @[@"Kurta"]
                          ];
+    
+    self.onlySectionmenuitems=@[@"Home Shopping",@"Sell On Gully", @"Buy Wholesale", @"Customer Care" ,@"Return Policy", @"FAQS", @"About & Policies"];
     
     // configure the tableview
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -135,8 +140,6 @@ static int const kHeaderSectionTag = 6900;
 
     header.textLabel.textColor = [UIColor whiteColor];
     if (section<=6) {
-        
-    
     UIImageView *viewWithTag = [self.view viewWithTag:kHeaderSectionTag + section];
 
     if (viewWithTag) {
@@ -150,9 +153,14 @@ static int const kHeaderSectionTag = 6900;
     theImageView.contentMode = UIViewContentModeScaleAspectFit;
     [header addSubview:theImageView];
     }
-    UIImageView *expandimageView = [[UIImageView alloc] initWithFrame:CGRectMake(200, 13, 10, 10)];
-    expandimageView.image = [UIImage imageNamed:@"back-arrow"];
-//    [header addSubview:expandimageView];
+
+    NSString *searchstring=[header.textLabel.text stringByReplacingOccurrencesOfString:@"         " withString:@""];
+     if (! [self.onlySectionmenuitems containsObject:searchstring] ) {
+         self.pluisMinusLbl = [[UILabel alloc] initWithFrame:CGRectMake(220, 8, 25, 25)];
+         self.pluisMinusLbl.text=@"+";
+         self.pluisMinusLbl.textColor=[UIColor whiteColor];
+         [header addSubview:self.pluisMinusLbl];
+     }
 
     // make headers touchable
     header.tag = section;
@@ -202,15 +210,16 @@ static int const kHeaderSectionTag = 6900;
 - (void)sectionHeaderWasTouched:(UITapGestureRecognizer *)sender {
     UITableViewHeaderFooterView *headerView = (UITableViewHeaderFooterView *)sender.view;
     NSInteger section = headerView.tag;
-    NSArray *menuitems=@[@"Home Shopping",@"Sell On Gully", @"Buy Wholesale", @"Customer Care" ,@"Return Policy", @"FAQS", @"About & Policies"];
+   
         NSString *searchstring=[headerView.textLabel.text stringByReplacingOccurrencesOfString:@"         " withString:@""];
-    if ( [menuitems containsObject:searchstring] ) {
+    if ( [self.onlySectionmenuitems containsObject:searchstring] ) {
         [self performSegueWithIdentifier:@"segueID" sender:self];
         return;
     }
     UIImageView *eImageView = (UIImageView *)[headerView viewWithTag:kHeaderSectionTag + section];
     self.expandedSectionHeader = headerView;
     
+
     if (self.expandedSectionHeaderNumber == -1) {
         self.expandedSectionHeaderNumber = section;
         [self tableViewExpandSection:section withImage: eImageView];
@@ -218,6 +227,7 @@ static int const kHeaderSectionTag = 6900;
         if (self.expandedSectionHeaderNumber == section) {
             [self tableViewCollapeSection:section withImage: eImageView];
             self.expandedSectionHeader = nil;
+           
         } else {
             UIImageView *cImageView  = (UIImageView *)[self.view viewWithTag:kHeaderSectionTag + self.expandedSectionHeaderNumber];
             [self tableViewCollapeSection:self.expandedSectionHeaderNumber withImage: cImageView];

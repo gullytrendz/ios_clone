@@ -11,7 +11,7 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 @import GoogleSignIn;
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet FBSDKLoginButton *loginButton;
 @property(strong, nonatomic)  GIDSignInButton *signInButton;
@@ -85,6 +85,13 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma arguments UITextField Delegates Methods
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 @end
