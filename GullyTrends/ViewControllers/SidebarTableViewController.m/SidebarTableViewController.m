@@ -8,7 +8,7 @@
 
 #import "SidebarTableViewController.h"
 #import "SWRevealViewController.h"
-#import "PhotoViewController.h"
+#import "SearchProductViewController.h"
 static int const kHeaderSectionTag = 6900;
 
 @interface SidebarTableViewController ()
@@ -191,10 +191,13 @@ static int const kHeaderSectionTag = 6900;
     
     // Set the photo if it navigates to the PhotoView
     if ([segue.identifier isEqualToString:@"showPhoto"]) {
-        UINavigationController *navController = segue.destinationViewController;
-        PhotoViewController *photoController = [navController childViewControllers].firstObject;
-        NSString *photoFilename = [NSString stringWithFormat:@"%@_photo", [menuItems objectAtIndex:indexPath.row]];
-        photoController.photoFilename = photoFilename;
+       // UINavigationController *navController = segue.destinationViewController;
+       // SearchProductViewController *productController = [navController childViewControllers].firstObject;
+       // NSString *photoFilename = [NSString stringWithFormat:@"%@_photo", [menuItems objectAtIndex:indexPath.row]];
+        //photoController.photoFilename = photoFilename;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"product" bundle:nil];
+        SearchProductViewController *myNewVC = (SearchProductViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SearchProductViewController"];
+        [self.navigationController pushViewController:myNewVC animated:YES];
     }
 }
 #pragma mark - Expand / Collapse Methods
