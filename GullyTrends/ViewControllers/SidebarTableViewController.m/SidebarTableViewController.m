@@ -198,14 +198,9 @@ static int const kHeaderSectionTag = 6900;
     destViewController.title = [[self.sectionNames objectAtIndex:indexPath.row] capitalizedString];
     
     // Set the photo if it navigates to the PhotoView
-    if ([segue.identifier isEqualToString:@"showPhoto"]) {
-       // UINavigationController *navController = segue.destinationViewController;
-       // SearchProductViewController *productController = [navController childViewControllers].firstObject;
-       // NSString *photoFilename = [NSString stringWithFormat:@"%@_photo", [menuItems objectAtIndex:indexPath.row]];
-        //photoController.photoFilename = photoFilename;
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"product" bundle:nil];
-        SearchProductViewController *myNewVC = (SearchProductViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SearchProductViewController"];
-        [self.navigationController pushViewController:myNewVC animated:YES];
+    if ([segue.identifier isEqualToString:@"segueID"]) {
+        SearchProductViewController *searchVC = [[SearchProductViewController alloc] init];
+        [self.navigationController pushViewController:searchVC animated:YES];
     }
 }
 #pragma mark - Expand / Collapse Methods

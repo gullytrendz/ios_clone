@@ -7,6 +7,7 @@
 //
 
 #import "SearchProductViewController.h"
+#import "SWRevealViewController.h"
 
 @interface SearchProductViewController ()<UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *productsCollectionView;
@@ -18,6 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    SWRevealViewController *revealViewController = self.revealViewController;
+       if ( revealViewController )
+       {
+           [self.sidebarButton setTarget: self.revealViewController];
+           [self.sidebarButton setAction: @selector( revealToggle: )];
+           [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+       }
+}
+-(void)viewWillAppear:(BOOL)animated{
+    UIImageView *imageview=[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    imageview.image=[UIImage imageNamed:@"homelogo"];
+    imageview.contentMode=UIViewContentModeScaleAspectFit;
+    self.navigationItem.titleView = imageview;
 }
 
 /*
