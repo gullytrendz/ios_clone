@@ -182,7 +182,7 @@ static int const kHeaderSectionTag = 6900;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     //self.selectedrow = [self.sectionNames objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:@"segueID" sender:self];
+//    [self performSegueWithIdentifier:@"segueID" sender:self];
 
 }
 

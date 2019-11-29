@@ -516,11 +516,11 @@
                             <color key="backgroundColor" red="0.30392920970916748" green="0.092974431812763214" blue="0.51002025604248047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" id="5PA-zg-NkQ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="title" id="5PA-zg-NkQ">
                                 <rect key="frame" x="0.0" y="151" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5PA-zg-NkQ" id="yOb-Sh-twj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmC-b8-tgK">
@@ -539,6 +539,9 @@
                                         <constraint firstItem="bmC-b8-tgK" firstAttribute="centerY" secondItem="yOb-Sh-twj" secondAttribute="centerY" constant="-2" id="wAt-4i-h6j"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="uU3-FU-DUe" kind="modal" modalPresentationStyle="fullScreen" id="jOK-fV-aMF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -548,7 +551,6 @@
                     </tableView>
                     <connections>
                         <outlet property="tableView" destination="FPA-C9-aqA" id="1qb-Yu-ZqL"/>
-                        <segue destination="2Ns-Vx-Zdu" kind="push" identifier="segueID" id="hSb-Rk-aKa"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCz-Kj-4H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -591,12 +593,12 @@
             </objects>
             <point key="canvasLocation" x="1462" y="-188"/>
         </scene>
-        <!--Search Product View Controller-->
+        <!--Shirts-->
         <scene sceneID="cab-KB-qTn">
             <objects>
                 <viewController storyboardIdentifier="SearchProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Ns-Vx-Zdu" customClass="SearchProductViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rzQ-D2-8Qb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="591"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqa-66-vGU">
@@ -693,7 +695,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g0z-jT-Phh">
-                                <rect key="frame" x="0.0" y="62" width="375" height="529"/>
+                                <rect key="frame" x="0.0" y="62" width="375" height="561"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="57V-Tp-a8V">
                                     <size key="itemSize" width="198" height="321"/>
@@ -786,13 +788,25 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KF5-Ka-RDe"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ugx-fq-U4r">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="vmc-pY-uwl"/>
+                    <navigationItem key="navigationItem" title="Shirts" id="678-hH-Yvf">
+                        <barButtonItem key="leftBarButtonItem" image="back-arrow" id="epJ-IE-Pcc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backAction:" destination="2Ns-Vx-Zdu" id="78y-af-tWK"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="cart-icon" id="C4i-R9-mRb">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                            <barButtonItem image="search-icon" id="YhR-6l-h4l">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="productsCollectionView" destination="g0z-jT-Phh" id="yXD-5k-rmi"/>
-                        <outlet property="sidebarButton" destination="vmc-pY-uwl" id="JXJ-u4-qbp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2j-oQ-H0a" sceneMemberID="firstResponder"/>
@@ -804,11 +818,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProductDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ol1-bo-zp7" customClass="ProductDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KCs-ze-XGG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1224"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vhh-rU-vQz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1174"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1206"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="nTG-DP-oDH">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="1190"/>
@@ -1512,7 +1526,7 @@
                                 </view>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bh-s0-hLY">
-                                <rect key="frame" x="0.0" y="1174" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="1206" width="320" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFb-Wv-UNv">
                                         <rect key="frame" x="0.0" y="0.0" width="160" height="50"/>
@@ -1607,6 +1621,31 @@
             </objects>
             <point key="canvasLocation" x="3894" y="240"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4U8-kq-lZO">
+            <objects>
+                <navigationController id="uU3-FU-DUe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="W4f-su-SVd"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lpb-ro-UWs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.30805587768554688" green="0.05989363044500351" blue="0.51811408996582031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Ns-Vx-Zdu" kind="relationship" relationship="rootViewController" id="g8p-HU-tFm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qB7-6I-SSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2657" y="-771"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AR-icon" width="146.5" height="225"/>
@@ -1614,6 +1653,7 @@
         <image name="app-logo" width="90.5" height="44"/>
         <image name="ar-bg-icon" width="50" height="25"/>
         <image name="ar-circle-icon" width="17.5" height="17.5"/>
+        <image name="back-arrow" width="19.5" height="11"/>
         <image name="bg-icons" width="320" height="569"/>
         <image name="book-tailor" width="27" height="22.5"/>
         <image name="cart-icon" width="17" height="20.5"/>
@@ -1629,6 +1669,7 @@
         <image name="menu-icon" width="22" height="15"/>
         <image name="menu_cart-icon" width="18.5" height="23"/>
         <image name="menu_wishlist-icon" width="18" height="24"/>
+        <image name="search-icon" width="12.5" height="18"/>
         <image name="seller-name-link-arrow" width="12" height="7"/>
         <image name="seller-name-star" width="6.5" height="6"/>
         <image name="sign-in-btn" width="222" height="54.5"/>
