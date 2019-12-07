@@ -99,7 +99,7 @@
     if (tableView == self.rightTableview){
         if (![self.selectedrighttindexs containsObject:[NSNumber numberWithInteger:indexPath.row]]) {
                    [self.selectedrighttindexs addObject:[NSNumber numberWithInteger:indexPath.row]];
-            NSLog(@"selectedrighttindexs are : %@",self.selectedrighttindexs);
+            NSLog(@"selectedFilterItems are : %@",self.selectedrighttindexs);
         }    }
 }
 
@@ -107,7 +107,7 @@
 {
     if (tableView == self.rightTableview){
      [self.selectedrighttindexs removeObject:[NSNumber numberWithInteger:indexPath.row]];
-      NSLog(@"selectedrighttindexs are : %@",self.selectedrighttindexs);
+      NSLog(@"selectedFilterItems are : %@",self.selectedrighttindexs);
     }
 }
 
