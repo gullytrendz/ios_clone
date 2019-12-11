@@ -34,6 +34,13 @@
 		71F2C3FB236FCB6800AA253C /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3FA236FCB6800AA253C /* AuthenticationServices.framework */; };
 		71F2C3FD236FCB7000AA253C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */; };
 		71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F2C403236FCED900AA253C /* SharedInstanceModel.m */; };
+		C815792423A16330002840BD /* MyCartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */; };
+		C815792523A16330002840BD /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815791F23A16330002840BD /* MyCartViewController.swift */; };
+		C815792623A16330002840BD /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815792023A16330002840BD /* MyOrdersViewController.swift */; };
+		C815792723A16330002840BD /* MyOrdersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815792123A16330002840BD /* MyOrdersCollectionViewCell.swift */; };
+		C815792823A16330002840BD /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815792223A16330002840BD /* WishlistViewController.swift */; };
+		C815792923A16330002840BD /* WishlistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815792323A16330002840BD /* WishlistCollectionViewCell.swift */; };
+		C815792B23A163C4002840BD /* OrderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815792A23A163C4002840BD /* OrderSummaryViewController.swift */; };
 		C8CFB7F6238B0235004C1A0C /* product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8CFB7F5238B0235004C1A0C /* product.storyboard */; };
 		C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CFB7F7238B0310004C1A0C /* ProductCollectionViewCell.m */; };
 		C8CFB7FE238B0310004C1A0C /* SearchProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CFB7FA238B0310004C1A0C /* SearchProductViewController.m */; };
@@ -81,6 +88,14 @@
 		71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		71F2C402236FCED900AA253C /* SharedInstanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedInstanceModel.h; sourceTree = "<group>"; };
 		71F2C403236FCED900AA253C /* SharedInstanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedInstanceModel.m; sourceTree = "<group>"; };
+		C815791D23A1632F002840BD /* GullyTrends-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GullyTrends-Bridging-Header.h"; sourceTree = "<group>"; };
+		C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartCollectionViewCell.swift; sourceTree = "<group>"; };
+		C815791F23A16330002840BD /* MyCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
+		C815792023A16330002840BD /* MyOrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersViewController.swift; sourceTree = "<group>"; };
+		C815792123A16330002840BD /* MyOrdersCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOrdersCollectionViewCell.swift; sourceTree = "<group>"; };
+		C815792223A16330002840BD /* WishlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
+		C815792323A16330002840BD /* WishlistCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistCollectionViewCell.swift; sourceTree = "<group>"; };
+		C815792A23A163C4002840BD /* OrderSummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderSummaryViewController.swift; sourceTree = "<group>"; };
 		C8CFB7F5238B0235004C1A0C /* product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = product.storyboard; sourceTree = "<group>"; };
 		C8CFB7F7238B0310004C1A0C /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
 		C8CFB7F8238B0310004C1A0C /* ProductDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsViewController.h; sourceTree = "<group>"; };
@@ -218,6 +233,14 @@
 				C8CFB7FB238B0310004C1A0C /* ProductDetailsViewController.m */,
 				C8CFB7FC238B0310004C1A0C /* SearchProductViewController.h */,
 				C8CFB7FA238B0310004C1A0C /* SearchProductViewController.m */,
+				C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */,
+				C815791F23A16330002840BD /* MyCartViewController.swift */,
+				C815792123A16330002840BD /* MyOrdersCollectionViewCell.swift */,
+				C815792023A16330002840BD /* MyOrdersViewController.swift */,
+				C815792323A16330002840BD /* WishlistCollectionViewCell.swift */,
+				C815792223A16330002840BD /* WishlistViewController.swift */,
+				C815792A23A163C4002840BD /* OrderSummaryViewController.swift */,
+				C815791D23A1632F002840BD /* GullyTrends-Bridging-Header.h */,
 			);
 			path = PhotoViewController;
 			sourceTree = "<group>";
@@ -324,6 +347,7 @@
 				TargetAttributes = {
 					71C3EC1E2369BE6E00206690 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -415,13 +439,20 @@
 			files = (
 				71C3EC2A2369BE6E00206690 /* ViewController.m in Sources */,
 				71C3EC242369BE6E00206690 /* AppDelegate.m in Sources */,
+				C815792723A16330002840BD /* MyOrdersCollectionViewCell.swift in Sources */,
+				C815792423A16330002840BD /* MyCartCollectionViewCell.swift in Sources */,
 				C8CFB7FE238B0310004C1A0C /* SearchProductViewController.m in Sources */,
 				71E860102389C1C000D60A38 /* CustomView.m in Sources */,
 				71C3EC462369BF3200206690 /* MainViewController.m in Sources */,
 				C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */,
+				C815792923A16330002840BD /* WishlistCollectionViewCell.swift in Sources */,
+				C815792523A16330002840BD /* MyCartViewController.swift in Sources */,
 				71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */,
 				71C3EC352369BE6E00206690 /* main.m in Sources */,
+				C815792B23A163C4002840BD /* OrderSummaryViewController.swift in Sources */,
 				71C3EC272369BE6E00206690 /* SceneDelegate.m in Sources */,
+				C815792623A16330002840BD /* MyOrdersViewController.swift in Sources */,
+				C815792823A16330002840BD /* WishlistViewController.swift in Sources */,
 				71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */,
 				71C3EC452369BF3200206690 /* SidebarTableViewController.m in Sources */,
 				C8CFB7FF238B0310004C1A0C /* ProductDetailsViewController.m in Sources */,
@@ -565,6 +596,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D7C2C7D2282AD34B2338036 /* Pods-GullyTrends.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53LVKZZYYY;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -627,6 +659,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fashion.gullytrends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GullyTrends/ViewControllers/PhotoViewController/GullyTrends-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -635,6 +670,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66BAFE83D650D5AD348E06F7 /* Pods-GullyTrends.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53LVKZZYYY;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -697,6 +733,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fashion.gullytrends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GullyTrends/ViewControllers/PhotoViewController/GullyTrends-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
