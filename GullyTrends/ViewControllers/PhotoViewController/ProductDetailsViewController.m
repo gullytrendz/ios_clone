@@ -7,6 +7,7 @@
 //
 
 #import "ProductDetailsViewController.h"
+#import "FilterViewController.h"
 
 @interface ProductDetailsViewController ()<UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *similarProductsCollectionView;
@@ -113,6 +114,11 @@
                         } completion:nil];
         
     }
+}
+- (IBAction)filterbtnActn:(UIButton *)sender {
+        FilterViewController *fvc=[[FilterViewController alloc] init];
+    //    [self presentViewController:fvc animated:YES completion:nil];
+        [self.navigationController pushViewController:fvc animated:YES];
 }
 
 
