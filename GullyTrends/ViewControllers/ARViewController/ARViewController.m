@@ -8,7 +8,7 @@
 
 #import "ARViewController.h"
 
-@interface ARViewController ()
+@interface ARViewController ()<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *arImage;
 @property (strong, nonatomic) IBOutlet UIButton *myCheckBoxButton;
 
@@ -51,5 +51,48 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)launchCamera:(UIButton *)sender {
+     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+
+         UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"Device has no camera."
+                                                                  preferredStyle:UIAlertControllerStyleAlert];
+
+        
+         UIAlertAction* cancel = [UIAlertAction
+                                       actionWithTitle:@"OK"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action) {
+                                           //Handle no, thanks button
+                                       }];
+         [alert addAction:cancel];
+
+         [self presentViewController:alert animated:YES completion:nil];
+
+
+    }
+    else{
+          UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            picker.delegate = self;
+            [self presentViewController:picker animated:YES completion:^{
+                NSLog(@"Photo Captured");
+            } ];
+    }
+
+    
+   
+    
+}
+-(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
+
+}
+//- (void)imagePickerController:(UIImagePickerController *)picker
+//        didFinishPickingImage:(UIImage *)image
+//                  editingInfo:(NSDictionary *)editingInfo
+//{
+//
+//    [[picker parentViewController] dismissViewControllerAnimated:YES completion:nil];
+//}
 
 @end
