@@ -7,7 +7,6 @@ target 'GullyTrends' do
 
   # Pods for GullyTrends
     pod 'Parse'
-    pod 'FBSDKLoginKit'
-
-
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
 end

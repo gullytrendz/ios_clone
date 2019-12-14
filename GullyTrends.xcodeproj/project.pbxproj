@@ -36,6 +36,12 @@
 		71F2C3FB236FCB6800AA253C /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3FA236FCB6800AA253C /* AuthenticationServices.framework */; };
 		71F2C3FD236FCB7000AA253C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */; };
 		71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F2C403236FCED900AA253C /* SharedInstanceModel.m */; };
+		BE69B98C23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69B98B23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift */; };
+		BE94EBC723A0181200F31632 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE94EBC623A0181200F31632 /* Constants.swift */; };
+		BE94EBC923A0191E00F31632 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE94EBC823A0191E00F31632 /* LoginViewController.swift */; };
+		BEC066D523A00CB9001A1264 /* ParseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC066D423A00CB9001A1264 /* ParseConstants.swift */; };
+		BEC066D723A00DCC001A1264 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC066D623A00DCC001A1264 /* UserAuthentication.swift */; };
+		BEC066D923A012DA001A1264 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC066D823A012DA001A1264 /* APIClient.swift */; };
 		C8CFB7F6238B0235004C1A0C /* product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8CFB7F5238B0235004C1A0C /* product.storyboard */; };
 		C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CFB7F7238B0310004C1A0C /* ProductCollectionViewCell.m */; };
 		C8CFB7FE238B0310004C1A0C /* SearchProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CFB7FA238B0310004C1A0C /* SearchProductViewController.m */; };
@@ -54,8 +60,6 @@
 		71C3EC1F2369BE6E00206690 /* GullyTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GullyTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71C3EC222369BE6E00206690 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		71C3EC232369BE6E00206690 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		71C3EC252369BE6E00206690 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		71C3EC262369BE6E00206690 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		71C3EC282369BE6E00206690 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		71C3EC292369BE6E00206690 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71C3EC2C2369BE6E00206690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +90,13 @@
 		71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		71F2C402236FCED900AA253C /* SharedInstanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedInstanceModel.h; sourceTree = "<group>"; };
 		71F2C403236FCED900AA253C /* SharedInstanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedInstanceModel.m; sourceTree = "<group>"; };
+		BE69B98B23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorUitilities.swift; sourceTree = "<group>"; };
+		BE94EBC623A0181200F31632 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BE94EBC823A0191E00F31632 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BEC066D323A00CB8001A1264 /* GullyTrends-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GullyTrends-Bridging-Header.h"; sourceTree = "<group>"; };
+		BEC066D423A00CB9001A1264 /* ParseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseConstants.swift; sourceTree = "<group>"; };
+		BEC066D623A00DCC001A1264 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
+		BEC066D823A012DA001A1264 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		C8CFB7F5238B0235004C1A0C /* product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = product.storyboard; sourceTree = "<group>"; };
 		C8CFB7F7238B0310004C1A0C /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
 		C8CFB7F8238B0310004C1A0C /* ProductDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsViewController.h; sourceTree = "<group>"; };
@@ -169,6 +180,8 @@
 		71C3EC212369BE6E00206690 /* GullyTrends */ = {
 			isa = PBXGroup;
 			children = (
+				BE69B98A23A4FD6B00D7CBE5 /* Utilities */,
+				BEC066D223A00C87001A1264 /* API Client */,
 				71E8600D2389B5F300D60A38 /* CustomClass */,
 				71F2C3FF236FCE4000AA253C /* Model */,
 				71F2C3FE236FCE1A00AA253C /* ViewControllers */,
@@ -199,8 +212,6 @@
 			children = (
 				71C3EC222369BE6E00206690 /* AppDelegate.h */,
 				71C3EC232369BE6E00206690 /* AppDelegate.m */,
-				71C3EC252369BE6E00206690 /* SceneDelegate.h */,
-				71C3EC262369BE6E00206690 /* SceneDelegate.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -250,6 +261,7 @@
 			children = (
 				71C3EC282369BE6E00206690 /* ViewController.h */,
 				71C3EC292369BE6E00206690 /* ViewController.m */,
+				BE94EBC823A0191E00F31632 /* LoginViewController.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -307,6 +319,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		BE69B98A23A4FD6B00D7CBE5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BE69B98B23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BEC066D223A00C87001A1264 /* API Client */ = {
+			isa = PBXGroup;
+			children = (
+				BEC066D323A00CB8001A1264 /* GullyTrends-Bridging-Header.h */,
+				BEC066D423A00CB9001A1264 /* ParseConstants.swift */,
+				BEC066D623A00DCC001A1264 /* UserAuthentication.swift */,
+				BEC066D823A012DA001A1264 /* APIClient.swift */,
+				BE94EBC623A0181200F31632 /* Constants.swift */,
+			);
+			path = "API Client";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -340,6 +372,7 @@
 				TargetAttributes = {
 					71C3EC1E2369BE6E00206690 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1110;
 					};
 				};
 			};
@@ -431,19 +464,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				71C3EC2A2369BE6E00206690 /* ViewController.m in Sources */,
+				BEC066D923A012DA001A1264 /* APIClient.swift in Sources */,
 				71C3EC242369BE6E00206690 /* AppDelegate.m in Sources */,
 				C8CFB7FE238B0310004C1A0C /* SearchProductViewController.m in Sources */,
+				BE94EBC923A0191E00F31632 /* LoginViewController.swift in Sources */,
+				BE69B98C23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift in Sources */,
 				71E860102389C1C000D60A38 /* CustomView.m in Sources */,
+				BEC066D723A00DCC001A1264 /* UserAuthentication.swift in Sources */,
 				71E05F35239BB2AD0069C6E3 /* FilterViewController.m in Sources */,
 				71C3EC462369BF3200206690 /* MainViewController.m in Sources */,
 				C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */,
 				71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */,
+				BEC066D523A00CB9001A1264 /* ParseConstants.swift in Sources */,
 				71C3EC352369BE6E00206690 /* main.m in Sources */,
-				71C3EC272369BE6E00206690 /* SceneDelegate.m in Sources */,
 				71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */,
 				71C3EC452369BF3200206690 /* SidebarTableViewController.m in Sources */,
 				C8CFB7FF238B0310004C1A0C /* ProductDetailsViewController.m in Sources */,
 				71C3EC4E2369C4FF00206690 /* ARViewController.m in Sources */,
+				BE94EBC723A0181200F31632 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +621,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6D7C2C7D2282AD34B2338036 /* Pods-GullyTrends.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53LVKZZYYY;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -645,6 +684,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fashion.gullytrends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GullyTrends/API Client/GullyTrends-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -653,6 +695,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66BAFE83D650D5AD348E06F7 /* Pods-GullyTrends.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 53LVKZZYYY;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -715,6 +758,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fashion.gullytrends;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GullyTrends/API Client/GullyTrends-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
