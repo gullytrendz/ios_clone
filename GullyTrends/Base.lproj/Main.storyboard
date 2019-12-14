@@ -1672,7 +1672,7 @@
         <image name="menu-icon" width="22" height="15"/>
         <image name="menu_cart-icon" width="18.5" height="23"/>
         <image name="menu_wishlist-icon" width="18" height="24"/>
-        <image name="search-icon" width="8.5" height="11.5"/>
+        <image name="search-icon" width="12.5" height="18"/>
         <image name="seller-name-link-arrow" width="12" height="7"/>
         <image name="seller-name-star" width="6.5" height="6"/>
         <image name="sign-in-btn" width="222" height="54.5"/>

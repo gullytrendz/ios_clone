@@ -85,31 +85,9 @@
 #pragma mark - UISceneSession lifecycle
 
 -(void)googleSignin{
-    [GIDSignIn sharedInstance].clientID = @"571839247263-pbbp937askcf4mrk0mj3ej478flnam0a.apps.googleusercontent.com";
-    [GIDSignIn sharedInstance].delegate = self;
+    [GIDSignIn sharedInstance].clientID = @"571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com";
 }
 
-- (void)signIn:(GIDSignIn *)signIn
-didSignInForUser:(GIDGoogleUser *)user
-     withError:(NSError *)error {
-  if (error != nil) {
-    if (error.code == kGIDSignInErrorCodeHasNoAuthInKeychain) {
-      NSLog(@"The user has not signed in before or they have since signed out.");
-    } else {
-      NSLog(@"%@", error.localizedDescription);
-    }
-    return;
-  }
-  // Perform any operations on signed in user here.
- // NSString *userId = user.userID;                  // For client-side use only!
-  // ...
-}
 
-- (void)signIn:(GIDSignIn *)signIn
-didDisconnectWithUser:(GIDGoogleUser *)user
-     withError:(NSError *)error {
-  // Perform any operations when the user disconnects from  here.
-  // ...
-}
 
 @end
