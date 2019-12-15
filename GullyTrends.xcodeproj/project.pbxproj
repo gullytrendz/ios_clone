@@ -14,17 +14,12 @@
 		71852C4D23748B1E00AFBD8A /* unchecked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71852C4B23748B1D00AFBD8A /* unchecked@2x.png */; };
 		71852C4E23748B1E00AFBD8A /* unchecked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 71852C4C23748B1E00AFBD8A /* unchecked@3x.png */; };
 		71BA3768236E0E9100D072EA /* blank-screen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71BA3767236E0E9100D072EA /* blank-screen.jpg */; };
-		71C3EC242369BE6E00206690 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC232369BE6E00206690 /* AppDelegate.m */; };
-		71C3EC272369BE6E00206690 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC262369BE6E00206690 /* SceneDelegate.m */; };
-		71C3EC2A2369BE6E00206690 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC292369BE6E00206690 /* ViewController.m */; };
 		71C3EC2D2369BE6E00206690 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C3EC2B2369BE6E00206690 /* Main.storyboard */; };
 		71C3EC2F2369BE6E00206690 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C3EC2E2369BE6E00206690 /* Assets.xcassets */; };
 		71C3EC322369BE6E00206690 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C3EC302369BE6E00206690 /* LaunchScreen.storyboard */; };
-		71C3EC352369BE6E00206690 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC342369BE6E00206690 /* main.m */; };
 		71C3EC452369BF3200206690 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC3E2369BF3100206690 /* SidebarTableViewController.m */; };
 		71C3EC462369BF3200206690 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC402369BF3100206690 /* MainViewController.m */; };
 		71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC492369BF4B00206690 /* SWRevealViewController.m */; };
-		71C3EC4E2369C4FF00206690 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C3EC4D2369C4FF00206690 /* ARViewController.m */; };
 		71E05F35239BB2AD0069C6E3 /* FilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E05F33239BB2AD0069C6E3 /* FilterViewController.m */; };
 		71E05F36239BB2AD0069C6E3 /* FilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71E05F34239BB2AD0069C6E3 /* FilterViewController.xib */; };
 		71E860102389C1C000D60A38 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71E8600E2389C1C000D60A38 /* CustomView.m */; };
@@ -36,12 +31,23 @@
 		71F2C3FB236FCB6800AA253C /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3FA236FCB6800AA253C /* AuthenticationServices.framework */; };
 		71F2C3FD236FCB7000AA253C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */; };
 		71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71F2C403236FCED900AA253C /* SharedInstanceModel.m */; };
-		BE69B98C23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69B98B23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift */; };
+		BE09004623A5D50C00B1F83D /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE09004523A5D50C00B1F83D /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */; };
+		BE09004823A5E13600B1F83D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09004723A5E13600B1F83D /* UserModel.swift */; };
+		BE09005023A5E4F800B1F83D /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09004F23A5E4F800B1F83D /* LoginVM.swift */; };
+		BE09005223A5EC2900B1F83D /* UserAuthentication+Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09005123A5EC2900B1F83D /* UserAuthentication+Parse.swift */; };
+		BE09005423A61C8200B1F83D /* AugmentedRealityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09005323A61C8200B1F83D /* AugmentedRealityVC.swift */; };
+		BE09005623A61D2E00B1F83D /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09005523A61D2E00B1F83D /* ViewController+Extension.swift */; };
+		BE09005823A61DD200B1F83D /* AugmentedRealityVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09005723A61DD200B1F83D /* AugmentedRealityVM.swift */; };
+		BE09005A23A61F5800B1F83D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09005923A61F5800B1F83D /* UIColor+Extension.swift */; };
+		BE09005C23A64A9500B1F83D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE09005B23A64A9500B1F83D /* UIView+Extension.swift */; };
+		BE69B99023A536C300D7CBE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE69B98F23A536C300D7CBE5 /* AppDelegate.swift */; };
 		BE94EBC723A0181200F31632 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE94EBC623A0181200F31632 /* Constants.swift */; };
 		BE94EBC923A0191E00F31632 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE94EBC823A0191E00F31632 /* LoginViewController.swift */; };
 		BEC066D523A00CB9001A1264 /* ParseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC066D423A00CB9001A1264 /* ParseConstants.swift */; };
 		BEC066D723A00DCC001A1264 /* UserAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC066D623A00DCC001A1264 /* UserAuthentication.swift */; };
 		BEC066D923A012DA001A1264 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC066D823A012DA001A1264 /* APIClient.swift */; };
+		BEC3790E23A66C1A00710C96 /* AugmentedRealityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3790D23A66C1A00710C96 /* AugmentedRealityModel.swift */; };
+		BEC3791023A66CA400710C96 /* AlertUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC3790F23A66CA400710C96 /* AlertUtilities.swift */; };
 		C8CFB7F6238B0235004C1A0C /* product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8CFB7F5238B0235004C1A0C /* product.storyboard */; };
 		C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CFB7F7238B0310004C1A0C /* ProductCollectionViewCell.m */; };
 		C8CFB7FE238B0310004C1A0C /* SearchProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8CFB7FA238B0310004C1A0C /* SearchProductViewController.m */; };
@@ -58,23 +64,16 @@
 		71852C4C23748B1E00AFBD8A /* unchecked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unchecked@3x.png"; sourceTree = "<group>"; };
 		71BA3767236E0E9100D072EA /* blank-screen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "blank-screen.jpg"; sourceTree = "<group>"; };
 		71C3EC1F2369BE6E00206690 /* GullyTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GullyTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		71C3EC222369BE6E00206690 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		71C3EC232369BE6E00206690 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		71C3EC282369BE6E00206690 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		71C3EC292369BE6E00206690 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71C3EC2C2369BE6E00206690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71C3EC2E2369BE6E00206690 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71C3EC312369BE6E00206690 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71C3EC332369BE6E00206690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		71C3EC342369BE6E00206690 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71C3EC3E2369BF3100206690 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
 		71C3EC3F2369BF3100206690 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		71C3EC402369BF3100206690 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		71C3EC422369BF3100206690 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
 		71C3EC482369BF4B00206690 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = GullyTrends/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		71C3EC492369BF4B00206690 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = GullyTrends/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
-		71C3EC4C2369C4FF00206690 /* ARViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
-		71C3EC4D2369C4FF00206690 /* ARViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
 		71E05F32239BB2AD0069C6E3 /* FilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilterViewController.h; sourceTree = "<group>"; };
 		71E05F33239BB2AD0069C6E3 /* FilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilterViewController.m; sourceTree = "<group>"; };
 		71E05F34239BB2AD0069C6E3 /* FilterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterViewController.xib; sourceTree = "<group>"; };
@@ -90,13 +89,24 @@
 		71F2C3FC236FCB7000AA253C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		71F2C402236FCED900AA253C /* SharedInstanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedInstanceModel.h; sourceTree = "<group>"; };
 		71F2C403236FCED900AA253C /* SharedInstanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharedInstanceModel.m; sourceTree = "<group>"; };
-		BE69B98B23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorUitilities.swift; sourceTree = "<group>"; };
+		BE09004523A5D50C00B1F83D /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
+		BE09004723A5E13600B1F83D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BE09004F23A5E4F800B1F83D /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		BE09005123A5EC2900B1F83D /* UserAuthentication+Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAuthentication+Parse.swift"; sourceTree = "<group>"; };
+		BE09005323A61C8200B1F83D /* AugmentedRealityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityVC.swift; sourceTree = "<group>"; };
+		BE09005523A61D2E00B1F83D /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
+		BE09005723A61DD200B1F83D /* AugmentedRealityVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityVM.swift; sourceTree = "<group>"; };
+		BE09005923A61F5800B1F83D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		BE09005B23A64A9500B1F83D /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		BE69B98F23A536C300D7CBE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE94EBC623A0181200F31632 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BE94EBC823A0191E00F31632 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BEC066D323A00CB8001A1264 /* GullyTrends-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GullyTrends-Bridging-Header.h"; sourceTree = "<group>"; };
 		BEC066D423A00CB9001A1264 /* ParseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseConstants.swift; sourceTree = "<group>"; };
 		BEC066D623A00DCC001A1264 /* UserAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthentication.swift; sourceTree = "<group>"; };
 		BEC066D823A012DA001A1264 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		BEC3790D23A66C1A00710C96 /* AugmentedRealityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AugmentedRealityModel.swift; sourceTree = "<group>"; };
+		BEC3790F23A66CA400710C96 /* AlertUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtilities.swift; sourceTree = "<group>"; };
 		C8CFB7F5238B0235004C1A0C /* product.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = product.storyboard; sourceTree = "<group>"; };
 		C8CFB7F7238B0310004C1A0C /* ProductCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCollectionViewCell.m; sourceTree = "<group>"; };
 		C8CFB7F8238B0310004C1A0C /* ProductDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsViewController.h; sourceTree = "<group>"; };
@@ -193,7 +203,7 @@
 				71C3EC2E2369BE6E00206690 /* Assets.xcassets */,
 				71C3EC302369BE6E00206690 /* LaunchScreen.storyboard */,
 				71C3EC332369BE6E00206690 /* Info.plist */,
-				71C3EC342369BE6E00206690 /* main.m */,
+				BE09004523A5D50C00B1F83D /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */,
 			);
 			path = GullyTrends;
 			sourceTree = "<group>";
@@ -210,8 +220,7 @@
 		71C3EC4B2369BF6300206690 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				71C3EC222369BE6E00206690 /* AppDelegate.h */,
-				71C3EC232369BE6E00206690 /* AppDelegate.m */,
+				BE69B98F23A536C300D7CBE5 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -219,8 +228,9 @@
 		71D861DA23890C1A0069E097 /* ARViewController */ = {
 			isa = PBXGroup;
 			children = (
-				71C3EC4C2369C4FF00206690 /* ARViewController.h */,
-				71C3EC4D2369C4FF00206690 /* ARViewController.m */,
+				BE09005323A61C8200B1F83D /* AugmentedRealityVC.swift */,
+				BE09005723A61DD200B1F83D /* AugmentedRealityVM.swift */,
+				BEC3790D23A66C1A00710C96 /* AugmentedRealityModel.swift */,
 			);
 			path = ARViewController;
 			sourceTree = "<group>";
@@ -259,9 +269,9 @@
 		71D861DE23890D0D0069E097 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				71C3EC282369BE6E00206690 /* ViewController.h */,
-				71C3EC292369BE6E00206690 /* ViewController.m */,
 				BE94EBC823A0191E00F31632 /* LoginViewController.swift */,
+				BE09004F23A5E4F800B1F83D /* LoginVM.swift */,
+				BE09004723A5E13600B1F83D /* UserModel.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -322,7 +332,11 @@
 		BE69B98A23A4FD6B00D7CBE5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				BE69B98B23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift */,
+				BE94EBC623A0181200F31632 /* Constants.swift */,
+				BE09005523A61D2E00B1F83D /* ViewController+Extension.swift */,
+				BE09005923A61F5800B1F83D /* UIColor+Extension.swift */,
+				BE09005B23A64A9500B1F83D /* UIView+Extension.swift */,
+				BEC3790F23A66CA400710C96 /* AlertUtilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -333,8 +347,8 @@
 				BEC066D323A00CB8001A1264 /* GullyTrends-Bridging-Header.h */,
 				BEC066D423A00CB9001A1264 /* ParseConstants.swift */,
 				BEC066D623A00DCC001A1264 /* UserAuthentication.swift */,
+				BE09005123A5EC2900B1F83D /* UserAuthentication+Parse.swift */,
 				BEC066D823A012DA001A1264 /* APIClient.swift */,
-				BE94EBC623A0181200F31632 /* Constants.swift */,
 			);
 			path = "API Client";
 			sourceTree = "<group>";
@@ -403,6 +417,7 @@
 				71F2C3F3236FCB2A00AA253C /* GoogleSignIn.bundle in Resources */,
 				71852C4E23748B1E00AFBD8A /* unchecked@3x.png in Resources */,
 				71852C4A237489B900AFBD8A /* checked@2x.png in Resources */,
+				BE09004623A5D50C00B1F83D /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist in Resources */,
 				71852C4D23748B1E00AFBD8A /* unchecked@2x.png in Resources */,
 				71C3EC322369BE6E00206690 /* LaunchScreen.storyboard in Resources */,
 				C8CFB7F6238B0235004C1A0C /* product.storyboard in Resources */,
@@ -463,24 +478,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71C3EC2A2369BE6E00206690 /* ViewController.m in Sources */,
 				BEC066D923A012DA001A1264 /* APIClient.swift in Sources */,
-				71C3EC242369BE6E00206690 /* AppDelegate.m in Sources */,
+				BE69B99023A536C300D7CBE5 /* AppDelegate.swift in Sources */,
 				C8CFB7FE238B0310004C1A0C /* SearchProductViewController.m in Sources */,
+				BE09005023A5E4F800B1F83D /* LoginVM.swift in Sources */,
 				BE94EBC923A0191E00F31632 /* LoginViewController.swift in Sources */,
-				BE69B98C23A4FD7800D7CBE5 /* ActivityIndicatorUitilities.swift in Sources */,
 				71E860102389C1C000D60A38 /* CustomView.m in Sources */,
 				BEC066D723A00DCC001A1264 /* UserAuthentication.swift in Sources */,
+				BE09005A23A61F5800B1F83D /* UIColor+Extension.swift in Sources */,
 				71E05F35239BB2AD0069C6E3 /* FilterViewController.m in Sources */,
+				BE09005823A61DD200B1F83D /* AugmentedRealityVM.swift in Sources */,
 				71C3EC462369BF3200206690 /* MainViewController.m in Sources */,
+				BE09005623A61D2E00B1F83D /* ViewController+Extension.swift in Sources */,
+				BE09005C23A64A9500B1F83D /* UIView+Extension.swift in Sources */,
 				C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */,
 				71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */,
 				BEC066D523A00CB9001A1264 /* ParseConstants.swift in Sources */,
-				71C3EC352369BE6E00206690 /* main.m in Sources */,
 				71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */,
 				71C3EC452369BF3200206690 /* SidebarTableViewController.m in Sources */,
+				BEC3791023A66CA400710C96 /* AlertUtilities.swift in Sources */,
+				BE09005223A5EC2900B1F83D /* UserAuthentication+Parse.swift in Sources */,
+				BE09004823A5E13600B1F83D /* UserModel.swift in Sources */,
 				C8CFB7FF238B0310004C1A0C /* ProductDetailsViewController.m in Sources */,
-				71C3EC4E2369C4FF00206690 /* ARViewController.m in Sources */,
+				BEC3790E23A66C1A00710C96 /* AugmentedRealityModel.swift in Sources */,
+				BE09005423A61C8200B1F83D /* AugmentedRealityVC.swift in Sources */,
 				BE94EBC723A0181200F31632 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,7 +3,7 @@
 //  GullyTrends
 //
 //  Created by Lakshmi Vajrapu on 24/11/19.
-//  Copyright © 2019 Lakshmi Vajrapu. All rights reserved.
+//  Copyright © 2019 GullyTrends. All rights reserved.
 //
 
 #import <AppKit/AppKit.h>

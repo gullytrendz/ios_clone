@@ -9,4 +9,5 @@ target 'GullyTrends' do
     pod 'Parse'
     pod 'FacebookCore'
     pod 'FacebookLogin'
+    pod 'MBProgressHUD', '~> 1.1.0'
 end

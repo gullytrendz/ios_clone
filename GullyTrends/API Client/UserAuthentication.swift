@@ -3,13 +3,15 @@
 //  GullyTrends
 //
 //  Created by Muni on 10/12/19.
-//  Copyright © 2019 Lakshmi Vajrapu. All rights reserved.
+//  Copyright © 2019 GullyTrends. All rights reserved.
 //
 
 import UIKit
-import Parse
 import FacebookLogin
+import FBSDKCoreKit
 import GoogleSignIn
+import Parse
+import MBProgressHUD
 
 enum SignOnMode: Int {
   case FACEBOOK = 0
@@ -18,8 +20,12 @@ enum SignOnMode: Int {
 
 class UserAuthentication: NSObject {
   
+  // MARK: - Properties
+  var completionHandler: (_ status: Bool?, _ errorMsg: String?) -> Void = { _, _ in }
+  var userModel = UserModel()
   static let shared = UserAuthentication()
   
+  // MARK: - Methods
   func socialSignOn(type: SignOnMode) {
     switch type {
     case .GOOGLE:
@@ -31,16 +37,24 @@ class UserAuthentication: NSObject {
     }
   }
   
+  //Call back block
+  func authenticationCompletionHandler(_ handler: @escaping (_ status: Bool?, _ errorMsg: String?) -> Void) {
+    completionHandler = handler
+  }
+  
 }
 
 //MARK :- FACEBOOK Authentication
 extension UserAuthentication {
   
   func facebookSignOn() {
+    //Loader
+    MBProgressHUD.showAdded(to: (rootVC?.view)!, animated: true)
+    
     let loginManager = LoginManager()
     loginManager.logIn(
-      permissions: [.publicProfile, .userFriends],
-      viewController: rootViewController
+      permissions: [.publicProfile, .email],
+      viewController: UIApplication.shared.windows.first!.rootViewController
     ) { result in
       self.loginManagerDidComplete(result)
     }
@@ -48,25 +62,62 @@ extension UserAuthentication {
   
   func loginManagerDidComplete(_ result: LoginResult) {
     switch result {
-    case .cancelled:
+    case .cancelled, .failed:
       print("Login Cancelled")
-    case .failed(let error):
-      print("Login failed with error \(error)")
+      DispatchQueue.main.async {
+        //Hide loader
+        MBProgressHUD.hide(for: (rootVC?.view)!, animated: true)
+      }
     case .success(let grantedPermissions, _, _):
       print("Login succeeded with granted permissions: \(grantedPermissions)")
+      getFacebookUserData()
+    }
+  }
+  
+  //User FB profile details
+  func getFacebookUserData() {
+    if AccessToken.current != nil {
+      let graphRequest: GraphRequest = GraphRequest(graphPath: "me", parameters: ["fields": "name,email,picture.type(large)"])
+      graphRequest.start { (_, result, error) -> Void in
+        
+        DispatchQueue.main.async {
+          //Hide loader
+          MBProgressHUD.hide(for: (rootVC?.view)!, animated: true)
+        }
+        if error != nil {
+          print("Error: \(error.debugDescription)")
+        } else {
+          if let data = result as? [String: AnyObject] {
+            print(data)
+            self.userModel.email = data["email"] as? String
+            // TODO: At present set dummy pwd. Will change later
+            self.userModel.password = data["id"] as? String
+            self.userModel.userName = data["id"] as? String
+            //self.accessToken  = FBSDKAccessToken.current().tokenString
+            //self.authType     = "FACEBOOK"
+            //            if let imageURL = ((data["picture"] as? [String: Any])?["data"] as? [String: Any])?["url"] as? String {
+            //              self.profileImageUrl = imageURL
+            //            }
+            LoginManager().logOut()
+          }
+        }
+        
+      }
     }
   }
   
 }
 
 //MARK :- Google Authentication
-
 extension UserAuthentication: GIDSignInDelegate {
   
   func googleSignOn() {
+    //Loader
+    MBProgressHUD.showAdded(to: (rootVC?.view)!, animated: true)
+    
     GIDSignIn.sharedInstance().clientID = "571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com"
     GIDSignIn.sharedInstance().delegate = self
-    GIDSignIn.sharedInstance()?.presentingViewController = rootViewController
+    GIDSignIn.sharedInstance()?.presentingViewController = UIApplication.shared.windows.first!.rootViewController
     GIDSignIn.sharedInstance()?.signIn()
     
   }
@@ -74,7 +125,7 @@ extension UserAuthentication: GIDSignInDelegate {
   // MARK: - GIDSignInDelegate
   func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
     //Hide loader
-    ActivityIndicatorUitilities.sharedInstance.hideLoader()
+    MBProgressHUD.hide(for: (rootVC?.view)!, animated: true)
   }
   
   // Present a view that prompts the user to sign in with Google
@@ -85,7 +136,7 @@ extension UserAuthentication: GIDSignInDelegate {
   // Dismiss the "Sign in with Google" view
   func sign(_ signIn: GIDSignIn!, dismiss viewController: UIViewController!) {
     //Hide loader
-    ActivityIndicatorUitilities.sharedInstance.hideLoader()
+    MBProgressHUD.hide(for: (rootVC?.view)!, animated: true)
     UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
   }
   
@@ -93,24 +144,23 @@ extension UserAuthentication: GIDSignInDelegate {
     if let error = error {
       print("\(error.localizedDescription)")
       //Hide loader
-      ActivityIndicatorUitilities.sharedInstance.hideLoader()
+      MBProgressHUD.hide(for: (rootVC?.view)!, animated: true)
     } else {
       DispatchQueue.main.async {
         GIDSignIn.sharedInstance().signOut()
       }
-//      emailAddress = user.profile.email
-//      accessToken = user.authentication.accessToken
-//      authType = "GMAIL"
-//      idToken = user.authentication.idToken
-//      if let imageURL = user.profile.imageURL(withDimension: 200) {
-//        profileImageUrl = imageURL.absoluteString
-//      }      
+      userModel.email = user?.profile?.email
+      // TODO: At present set dummy pwd. Will change later
+      userModel.password = user?.userID
+      userModel.userName = user?.userID
+      //User account validation
+      validateUserdata()
     }
   }
   
   func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
     //Hide loader
-    ActivityIndicatorUitilities.sharedInstance.hideLoader()
+    MBProgressHUD.hide(for: (rootVC?.view)!, animated: true)
   }
   
 }

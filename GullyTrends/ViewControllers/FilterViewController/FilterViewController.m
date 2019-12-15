@@ -3,7 +3,7 @@
 //  Constraintsdemo
 //
 //  Created by Lakshmi Vajrapu on 07/12/19.
-//  Copyright © 2019 Lakshmi Vajrapu. All rights reserved.
+//  Copyright © 2019 GullyTrends. All rights reserved.
 //
 
 #import "FilterViewController.h"

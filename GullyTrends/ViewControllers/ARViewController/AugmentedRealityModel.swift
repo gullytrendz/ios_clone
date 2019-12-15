@@ -1,14 +1,13 @@
 //
-//  APIClient.swift
+//  AugmentedRealityModel.swift
 //  GullyTrends
 //
-//  Created by Muni on 10/12/19.
+//  Created by R.A. on 15/12/19.
 //  Copyright © 2019 GullyTrends. All rights reserved.
 //
 
 import UIKit
 
-class APIClient {
-    
+class AugmentedRealityModel {
 
 }
