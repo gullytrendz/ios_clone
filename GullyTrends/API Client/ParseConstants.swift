@@ -10,9 +10,9 @@ import Foundation
 import Parse
 
 struct ParseKeys {
-  static let ApplicationId = "oK1ANsHVo1zKMZsfdeM2C0ixW8spsXw2JWBnP5nJ"
-  static let ClientKey = "yRQD1tX8bbuEixkgYf0pFlQ7T59g4T1YzweFVRPU"
-  static let ServerKey = "https://parseapi.back4app.com"
+  static let ApplicationId = "a6c3d2f689462302580feac788adb3b6"
+  static let ClientKey = "e053abd00a56a23494006180a9ba3c70"
+  static let ServerKey = "http://gullytrendz.herokuapp.com/parse"
 }
 
 

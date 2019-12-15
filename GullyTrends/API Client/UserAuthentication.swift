@@ -147,6 +147,7 @@ extension UserAuthentication: GIDSignInDelegate {
       MBProgressHUD.hide(for: (rootVC?.view)!, animated: true)
     } else {
       DispatchQueue.main.async {
+        MBProgressHUD.hide(for: (rootVC?.view)!, animated: true)
         GIDSignIn.sharedInstance().signOut()
       }
       userModel.email = user?.profile?.email
