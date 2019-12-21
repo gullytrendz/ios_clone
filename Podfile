@@ -6,8 +6,8 @@ target 'GullyTrends' do
   use_frameworks!
 
   # Pods for GullyTrends
-    pod 'Parse'
-    pod 'FBSDKLoginKit'
-
-
+     pod 'Parse'
+       pod 'FacebookCore'
+       pod 'FacebookLogin'
+       pod 'MBProgressHUD', '~> 1.1.0'
 end

@@ -19,8 +19,9 @@
 #import "FBSDKAddressInferencer.h"
 
 #import "FBSDKModelManager.h"
-#import "FBSDKModelRuntime.h"
-#import "FBSDKStandaloneModel.h"
+#import "FBSDKModelRuntime.hpp"
+#import "FBSDKModelUtility.h"
+#import "FBSDKStandaloneModel.hpp"
 
 #include<stdexcept>
 
@@ -63,7 +64,11 @@ static std::vector<float> _denseFeature;
 
 + (void)loadWeights
 {
-  NSData *latestData = [NSData dataWithContentsOfFile:[FBSDKModelManager getWeightsPath:DATA_DETECTION_ADDRESS_KEY]
+  NSString *path = [FBSDKModelManager getWeightsPath:DATA_DETECTION_ADDRESS_KEY];
+  if (!path) {
+    return;
+  }
+  NSData *latestData = [NSData dataWithContentsOfFile:path
                                               options:NSDataReadingMappedIfSafe
                                                 error:nil];
   if (!latestData) {
@@ -171,6 +176,12 @@ static std::vector<float> _denseFeature;
   if (!param || _weights.size() == 0 || _denseFeature.size() == 0) {
     return false;
   }
+
+  NSString *text = [FBSDKModelUtility normalizeText:param];
+  const char *bytes = [text UTF8String];
+  if ((int)strlen(bytes) == 0) {
+    return false;
+  }
   float *predictedRaw;
   NSMutableDictionary<NSString *, id> *modelInfo = [[NSUserDefaults standardUserDefaults] objectForKey:MODEL_INFO_KEY];
   if (!modelInfo) {
@@ -183,7 +194,7 @@ static std::vector<float> _denseFeature;
   NSMutableArray *thresholds = [addressModelInfo objectForKey:THRESHOLDS_KEY];
   float threshold = [thresholds[0] floatValue];
   try {
-    predictedRaw = mat1::predictOnText([param UTF8String], _weights, &_denseFeature[0]);
+    predictedRaw = mat1::predictOnText(bytes, _weights, &_denseFeature[0]);
     if (!predictedRaw[1]) {
       return false;
     }

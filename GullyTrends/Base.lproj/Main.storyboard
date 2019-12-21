@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZGd-E7-WUt" kind="relationship" relationship="rootViewController" id="caY-T7-vmd"/>
+                        <segue destination="ZGd-E7-WUt" kind="relationship" relationship="rootViewController" id="gOp-Bd-Oed"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQH-UW-2OW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1904" y="19"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="afx-t7-Z6O">
             <objects>
-                <viewController id="ZGd-E7-WUt" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="ZGd-E7-WUt" customClass="LoginViewController" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tsO-ZX-DCs"/>
                         <viewControllerLayoutGuide type="bottom" id="nMc-8F-EHj"/>
@@ -73,7 +73,7 @@
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <outlet property="delegate" destination="ZGd-E7-WUt" id="gnJ-7u-dEd"/>
+                                                            <outlet property="delegate" destination="ZGd-E7-WUt" id="EnN-8i-cng"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dve-Eh-jAZ">
@@ -101,7 +101,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <outlet property="delegate" destination="ZGd-E7-WUt" id="9xW-JW-xbw"/>
+                                                            <outlet property="delegate" destination="ZGd-E7-WUt" id="juW-ZB-KTw"/>
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duf-3j-MBQ">
@@ -128,21 +128,27 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="5Y3-1T-yqh" kind="push" id="jVC-Gp-8of"/>
+                                            <action selector="tapOnLogin:" destination="ZGd-E7-WUt" eventType="touchUpInside" id="5IH-tf-yRH"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l5g-oo-b7A">
                                         <rect key="frame" x="77.5" y="194" width="200" height="40"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gs-bq-NRi" customClass="FBSDKLoginButton">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gs-bq-NRi">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="40"/>
                                                 <state key="normal" backgroundImage="fb-btn">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tapOnSocailLogin:" destination="ZGd-E7-WUt" eventType="touchUpInside" id="T3y-5V-eiS"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEo-LQ-e0t">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEo-LQ-e0t">
                                                 <rect key="frame" x="110" y="0.0" width="90" height="40"/>
                                                 <state key="normal" backgroundImage="google-btn"/>
+                                                <connections>
+                                                    <action selector="tapOnSocailLogin:" destination="ZGd-E7-WUt" eventType="touchUpInside" id="z1e-AS-15b"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -197,9 +203,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="rOm-mG-bu2"/>
                     <connections>
-                        <outlet property="UsernameTxt" destination="Q86-xB-qFR" id="lcH-vk-9gg"/>
-                        <outlet property="loginButton" destination="2gs-bq-NRi" id="l4o-Vl-KcZ"/>
-                        <outlet property="otpTxt" destination="1s1-zg-u3b" id="cPt-4f-OCi"/>
+                        <outlet property="otpTF" destination="1s1-zg-u3b" id="VKQ-ew-yue"/>
+                        <outlet property="userNameTF" destination="Q86-xB-qFR" id="HMJ-ys-vAc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Kn-xX-Dmu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -209,7 +214,7 @@
         <!--AR View Controller-->
         <scene sceneID="WhO-bb-q9e">
             <objects>
-                <viewController id="5Y3-1T-yqh" userLabel="AR View Controller" customClass="ARViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AugmentedRealityVC" id="5Y3-1T-yqh" userLabel="AR View Controller" customClass="AugmentedRealityVC" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IV7-Qy-I3l"/>
                         <viewControllerLayoutGuide type="bottom" id="ZIK-zX-NWO"/>
@@ -242,7 +247,7 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Get Your Sizes" backgroundImage="get-your-sizes-btn"/>
                                 <connections>
-                                    <action selector="launchCamera:" destination="5Y3-1T-yqh" eventType="touchUpInside" id="Nyy-4f-uFP"/>
+                                    <action selector="tapOnSizes" destination="5Y3-1T-yqh" eventType="touchUpInside" id="blS-tt-Xc7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept terms and Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dah-Xr-D2x">
@@ -254,6 +259,7 @@
                                 <rect key="frame" x="267" y="619" width="72" height="30"/>
                                 <state key="normal" title="  Skip" image="skip-icon"/>
                                 <connections>
+                                    <action selector="tapOnSkip" destination="5Y3-1T-yqh" eventType="touchUpInside" id="vEw-wy-Hkw"/>
                                     <segue destination="vXZ-lx-hvc" kind="push" id="gV8-P3-eCK"/>
                                 </connections>
                             </button>
@@ -267,7 +273,7 @@
                                 <state key="selected" image="checked.png"/>
                                 <state key="highlighted" image="unchecked.png"/>
                                 <connections>
-                                    <action selector="checkBoxToggle:" destination="5Y3-1T-yqh" eventType="touchUpInside" id="yhW-W7-Xgg"/>
+                                    <action selector="tapOnTermsAndConditions" destination="5Y3-1T-yqh" eventType="touchUpInside" id="XaV-yC-ajS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -287,6 +293,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a5a-rH-q4Z"/>
+                    <connections>
+                        <outlet property="checkButton" destination="QKw-uP-Noc" id="KSj-ZZ-C4H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t06-hT-FdP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -301,7 +310,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -438,7 +447,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-7i-wlW">
-                                        <rect key="frame" x="129" y="11" width="40" height="38.5"/>
+                                        <rect key="frame" x="129" y="11" width="40" height="38"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Th4-gW-Zka"/>
                                             <constraint firstAttribute="width" constant="40" id="smF-tD-eVy"/>
@@ -645,7 +654,7 @@
                                 <rect key="frame" x="0.0" y="151" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5PA-zg-NkQ" id="yOb-Sh-twj">
-                                    <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmC-b8-tgK">
@@ -2830,7 +2839,7 @@
                                                             <state key="normal" backgroundImage="love-icon"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-Sf-gfY">
-                                                            <rect key="frame" x="190" y="154" width="30" height="31"/>
+                                                            <rect key="frame" x="190" y="154.5" width="30" height="30.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="WfG-hn-0Zy"/>
                                                                 <constraint firstAttribute="width" constant="30" id="h0u-gk-mYh"/>
@@ -2948,7 +2957,7 @@
         <image name="bg-icons" width="320" height="569"/>
         <image name="book-tailor" width="27" height="22.5"/>
         <image name="cart-bag-icon" width="19" height="22.5"/>
-        <image name="cart-icon" width="18.5" height="23"/>
+        <image name="cart-icon" width="17" height="20.5"/>
         <image name="checked.png" width="24.5" height="24.5"/>
         <image name="fb-btn" width="109" height="56"/>
         <image name="filter-icon" width="14" height="9"/>
@@ -2958,12 +2967,12 @@
         <image name="location-icon" width="13.5" height="19"/>
         <image name="logo" width="90.5" height="44"/>
         <image name="love-icon" width="13.5" height="12"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="60"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="menu" width="22" height="22"/>
         <image name="menu-icon" width="22" height="15"/>
         <image name="menu_cart-icon" width="18.5" height="23"/>
         <image name="menu_wishlist-icon" width="18" height="24"/>
-        <image name="search-icon" width="8.5" height="11.5"/>
+        <image name="search-icon" width="12.5" height="18"/>
         <image name="seller-name-link-arrow" width="12" height="7"/>
         <image name="seller-name-star" width="6.5" height="6"/>
         <image name="sign-in-btn" width="222" height="54.5"/>
