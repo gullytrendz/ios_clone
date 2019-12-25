@@ -50,6 +50,10 @@
 		BE29BC1F23AE9FFC00D8B448 /* AugmentedRealityVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE29BC1C23AE9FFC00D8B448 /* AugmentedRealityVM.swift */; };
 		BE29BC2123AEA12800D8B448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE29BC2023AEA12800D8B448 /* AppDelegate.swift */; };
 		BE29BC2323AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE29BC2223AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */; };
+		BE96D31C23B3204B007F4DD1 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D31B23B3204B007F4DD1 /* MenuVM.swift */; };
+		BE96D31F23B327CC007F4DD1 /* MyCartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */; };
+		BE96D32123B327DB007F4DD1 /* MyCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32023B327DB007F4DD1 /* MyCartModel.swift */; };
+		BE96D32323B37497007F4DD1 /* ProductsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32223B37497007F4DD1 /* ProductsVM.swift */; };
 		C815792423A16330002840BD /* MyCartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */; };
 		C815792523A16330002840BD /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815791F23A16330002840BD /* MyCartViewController.swift */; };
 		C815792623A16330002840BD /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815792023A16330002840BD /* MyOrdersViewController.swift */; };
@@ -119,6 +123,10 @@
 		BE29BC1C23AE9FFC00D8B448 /* AugmentedRealityVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AugmentedRealityVM.swift; sourceTree = "<group>"; };
 		BE29BC2023AEA12800D8B448 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE29BC2223AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
+		BE96D31B23B3204B007F4DD1 /* MenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
+		BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVM.swift; sourceTree = "<group>"; };
+		BE96D32023B327DB007F4DD1 /* MyCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartModel.swift; sourceTree = "<group>"; };
+		BE96D32223B37497007F4DD1 /* ProductsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVM.swift; sourceTree = "<group>"; };
 		C815791D23A1632F002840BD /* GullyTrends-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GullyTrends-Bridging-Header.h"; sourceTree = "<group>"; };
 		C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartCollectionViewCell.swift; sourceTree = "<group>"; };
 		C815791F23A16330002840BD /* MyCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
@@ -264,8 +272,6 @@
 				C8CFB7FB238B0310004C1A0C /* ProductDetailsViewController.m */,
 				C8CFB7FC238B0310004C1A0C /* SearchProductViewController.h */,
 				C8CFB7FA238B0310004C1A0C /* SearchProductViewController.m */,
-				C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */,
-				C815791F23A16330002840BD /* MyCartViewController.swift */,
 				C815792123A16330002840BD /* MyOrdersCollectionViewCell.swift */,
 				C815792023A16330002840BD /* MyOrdersViewController.swift */,
 				C815792323A16330002840BD /* WishlistCollectionViewCell.swift */,
@@ -281,6 +287,8 @@
 			children = (
 				71C3EC3F2369BF3100206690 /* MainViewController.h */,
 				71C3EC402369BF3100206690 /* MainViewController.m */,
+				BE96D31B23B3204B007F4DD1 /* MenuVM.swift */,
+				BE96D32223B37497007F4DD1 /* ProductsVM.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -348,6 +356,7 @@
 		71F2C3FE236FCE1A00AA253C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BE96D31D23B32774007F4DD1 /* MyCartViewController */,
 				71E05F8923A4021B0069C6E3 /* PaymentViewController */,
 				71E05F31239BB2AD0069C6E3 /* FilterViewController */,
 				71D861DC23890C960069E097 /* HomeViewController */,
@@ -392,6 +401,17 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		BE96D31D23B32774007F4DD1 /* MyCartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C815791F23A16330002840BD /* MyCartViewController.swift */,
+				C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */,
+				BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */,
+				BE96D32023B327DB007F4DD1 /* MyCartModel.swift */,
+			);
+			path = MyCartViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -421,7 +441,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "Lakshmi Vajrapu";
+				ORGANIZATIONNAME = GullyTrends;
 				TargetAttributes = {
 					71C3EC1E2369BE6E00206690 = {
 						CreatedOnToolsVersion = 11.0;
@@ -531,6 +551,7 @@
 				71E860102389C1C000D60A38 /* CustomView.m in Sources */,
 				71E05F35239BB2AD0069C6E3 /* FilterViewController.m in Sources */,
 				BE29BC0F23AE9FCA00D8B448 /* Constants.swift in Sources */,
+				BE96D31F23B327CC007F4DD1 /* MyCartVM.swift in Sources */,
 				71C3EC462369BF3200206690 /* MainViewController.m in Sources */,
 				BE29BC0523AE9FAB00D8B448 /* UserAuthentication+Parse.swift in Sources */,
 				C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */,
@@ -545,10 +566,13 @@
 				C815792823A16330002840BD /* WishlistViewController.swift in Sources */,
 				BE29BC0823AE9FAB00D8B448 /* ParseConstants.swift in Sources */,
 				BE29BC0723AE9FAB00D8B448 /* UserAuthentication.swift in Sources */,
+				BE96D31C23B3204B007F4DD1 /* MenuVM.swift in Sources */,
 				71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */,
 				BE29BC1E23AE9FFC00D8B448 /* AugmentedRealityVC.swift in Sources */,
 				71C3EC452369BF3200206690 /* SidebarTableViewController.m in Sources */,
 				C8CFB7FF238B0310004C1A0C /* ProductDetailsViewController.m in Sources */,
+				BE96D32123B327DB007F4DD1 /* MyCartModel.swift in Sources */,
+				BE96D32323B37497007F4DD1 /* ProductsVM.swift in Sources */,
 				BE29BC2123AEA12800D8B448 /* AppDelegate.swift in Sources */,
 				BE29BC0623AE9FAB00D8B448 /* APIClient.swift in Sources */,
 			);
@@ -692,6 +716,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 53LVKZZYYY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -766,6 +791,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 53LVKZZYYY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

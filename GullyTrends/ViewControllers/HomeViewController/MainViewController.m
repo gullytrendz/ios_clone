@@ -10,6 +10,7 @@
 #import "SWRevealViewController.h"
 #import "CustomView.h"
 
+
 @interface MainViewController ()
 @property NSArray<NSNumber *> *widthArr;
 @property NSArray<NSNumber *> *heightArr;
@@ -33,6 +34,7 @@
     [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+  
 
 }
 -(void)viewWillAppear:(BOOL)animated{

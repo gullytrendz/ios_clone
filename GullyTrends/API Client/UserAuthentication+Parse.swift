@@ -49,6 +49,9 @@ extension UserAuthentication {
       return false
     }
     aUserInfo = currentUser
+//    let predicate = NSPredicate(format: "type = menu")
+//    let query = PFQuery(className: ParseClassName.K_SETTINGS, predicate: predicate)
+
     return true
   }
   

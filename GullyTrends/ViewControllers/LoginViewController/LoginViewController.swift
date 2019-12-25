@@ -33,6 +33,11 @@ class LoginViewController: UIViewController {
     
     //Validate Current user
     if UserAuthentication.validateCurrentUser() {
+//      MenuVM.getMenusData { (menuArray, errorMsg) in
+//        if errorMsg == nil {
+//          print(menuArray)
+//        }
+//      }
         navigateToDashboard()
     }
 
