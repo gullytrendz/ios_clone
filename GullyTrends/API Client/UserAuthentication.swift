@@ -99,6 +99,8 @@ extension UserAuthentication {
             //              self.profileImageUrl = imageURL
             //            }
             LoginManager().logOut()
+            //User account validation
+            self.validateUserdata()
           }
         }
         

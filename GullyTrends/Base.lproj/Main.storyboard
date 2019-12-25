@@ -12,9 +12,9 @@
         <!--Navigation Controller-->
         <scene sceneID="I4b-fb-PPg">
             <objects>
-                <navigationController id="5IY-Hp-MWf" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="5IY-Hp-MWf" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kD7-ra-jfw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-icons" translatesAutoresizingMaskIntoConstraints="NO" id="0jj-69-nuG">
-                                <rect key="frame" x="0.0" y="44" width="375" height="657"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="701"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hbC-sK-YYg">
                                 <rect key="frame" x="62.5" y="155" width="250" height="100"/>
@@ -386,7 +386,7 @@
         <!--Main View Controller-->
         <scene sceneID="jZ6-Nu-3CT">
             <objects>
-                <viewController id="Z2I-Sz-A3d" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="Z2I-Sz-A3d" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RX0-GO-ibe"/>
                         <viewControllerLayoutGuide type="bottom" id="X92-Ax-75B"/>
@@ -1791,11 +1791,11 @@
             <objects>
                 <viewController storyboardIdentifier="MyCartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U8B-gV-0pb" customClass="MyCartViewController" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Qv-A9-O20">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYQ-Km-Uj9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGy-6z-UI8">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -2965,7 +2965,7 @@
         <image name="girl" width="42" height="42"/>
         <image name="google-btn" width="110" height="56"/>
         <image name="location-icon" width="13.5" height="19"/>
-        <image name="logo" width="90.5" height="44"/>
+        <image name="logo" width="190.5" height="90.5"/>
         <image name="love-icon" width="13.5" height="12"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="menu" width="22" height="22"/>
@@ -2986,6 +2986,6 @@
         <image name="wishlist-icon" width="20" height="18.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZrA-Mr-2Vp"/>
+        <segue reference="dbB-YF-GQg"/>
     </inferredMetricsTieBreakers>
 </document>

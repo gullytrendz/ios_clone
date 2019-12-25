@@ -24,7 +24,7 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>977561489256853</string>
+	<string>519550401976064</string>
 	<key>FacebookDisplayName</key>
 	<string>GullyTrendz</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -57,7 +57,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb977561489256853</string>
+				<string>fb519550401976064</string>
 			</array>
 		</dict>
 		<dict>
