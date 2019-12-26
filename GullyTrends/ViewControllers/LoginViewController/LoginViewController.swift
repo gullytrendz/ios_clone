@@ -33,14 +33,24 @@ class LoginViewController: UIViewController {
     
     //Validate Current user
     if UserAuthentication.validateCurrentUser() {
-//      MenuVM.getMenusData { (menuArray, errorMsg) in
-//        if errorMsg == nil {
-//          print(menuArray)
-//        }
-//      }
-        navigateToDashboard()
+      self.navigateToDashboard()
     }
-
+     
+    //TODO: Below code use after login
+    
+    /*//Initial call request Settings pull the all records
+    MenuVM.getSettingsLists { (settingsArray, errorMsg) in
+      guard errorMsg == nil else {
+        AlertUtilities.showAlert(message: errorMsg!) { _ in }
+        return
+      }
+      
+      //Filter menu type list from Settings
+      MenuVM.getMenuList(array: settingsArray) { (menuArray) in
+        print(menuArray)
+      }
+    }*/
+    
   }
   
   // MARK: - Actions
@@ -49,8 +59,8 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func tapOnLogin(_ sender: UIButton) {
-     AlertUtilities.showAlert(message: "In progrss Login with OTP \n Try with Google/FB") { _ in }
-   }
+    AlertUtilities.showAlert(message: "In progrss Login with OTP \n Try with Google/FB") { _ in }
+  }
   
   private func navigateToAugmentedReality() {
     let aVC = AugmentedRealityVC.load(from: STORYBOARD.Main)
