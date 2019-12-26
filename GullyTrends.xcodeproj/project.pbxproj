@@ -54,6 +54,7 @@
 		BE96D31F23B327CC007F4DD1 /* MyCartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */; };
 		BE96D32123B327DB007F4DD1 /* MyCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32023B327DB007F4DD1 /* MyCartModel.swift */; };
 		BE96D32323B37497007F4DD1 /* ProductsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32223B37497007F4DD1 /* ProductsVM.swift */; };
+		BE96D32523B43D6E007F4DD1 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32423B43D6E007F4DD1 /* MenuModel.swift */; };
 		C815792423A16330002840BD /* MyCartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */; };
 		C815792523A16330002840BD /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815791F23A16330002840BD /* MyCartViewController.swift */; };
 		C815792623A16330002840BD /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815792023A16330002840BD /* MyOrdersViewController.swift */; };
@@ -127,6 +128,7 @@
 		BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVM.swift; sourceTree = "<group>"; };
 		BE96D32023B327DB007F4DD1 /* MyCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartModel.swift; sourceTree = "<group>"; };
 		BE96D32223B37497007F4DD1 /* ProductsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVM.swift; sourceTree = "<group>"; };
+		BE96D32423B43D6E007F4DD1 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		C815791D23A1632F002840BD /* GullyTrends-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GullyTrends-Bridging-Header.h"; sourceTree = "<group>"; };
 		C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartCollectionViewCell.swift; sourceTree = "<group>"; };
 		C815791F23A16330002840BD /* MyCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				71C3EC3F2369BF3100206690 /* MainViewController.h */,
 				71C3EC402369BF3100206690 /* MainViewController.m */,
 				BE96D31B23B3204B007F4DD1 /* MenuVM.swift */,
+				BE96D32423B43D6E007F4DD1 /* MenuModel.swift */,
 				BE96D32223B37497007F4DD1 /* ProductsVM.swift */,
 			);
 			path = HomeViewController;
@@ -566,6 +569,7 @@
 				C815792823A16330002840BD /* WishlistViewController.swift in Sources */,
 				BE29BC0823AE9FAB00D8B448 /* ParseConstants.swift in Sources */,
 				BE29BC0723AE9FAB00D8B448 /* UserAuthentication.swift in Sources */,
+				BE96D32523B43D6E007F4DD1 /* MenuModel.swift in Sources */,
 				BE96D31C23B3204B007F4DD1 /* MenuVM.swift in Sources */,
 				71F2C404236FCED900AA253C /* SharedInstanceModel.m in Sources */,
 				BE29BC1E23AE9FFC00D8B448 /* AugmentedRealityVC.swift in Sources */,

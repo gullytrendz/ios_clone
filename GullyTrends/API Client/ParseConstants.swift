@@ -15,13 +15,13 @@ struct ParseKeys {
   static let ServerKey = "http://gullytrendz.herokuapp.com/parse"
 }
 
-struct ParseClassName {
-  static let K_SETTINGS = "Settings"
-  static let K_PRODUCTS = "Products"
-}
-
 
 class ParseManger {
+  
+  static let shared = ParseManger()
+  
+  //Parse Objects
+  var settingsArray: [PFObject]? = [PFObject]()
   
   //Initialise Parse SDK
   static func setup() {
@@ -46,13 +46,29 @@ class ParseManger {
     })
   }
   
-  static func queryWithClass(_ name: String, queries: [String: String]? = nil, _ completionHandler: @escaping (_ menuObjects: [PFObject]?, _ errorMsg: String?) -> Void) {
+  static func queryWithClass(_ name: String, queries: [String: String]? = nil, includeKeys: [String]? = nil, selectKeys: [String]? = nil, _ completionHandler: @escaping (_ menuObjects: [PFObject]?, _ errorMsg: String?) -> Void) {
     let query = PFQuery(className: name)
+    
+    //Equals
     if let dict = queries {
       for (key, value) in dict {
         query.whereKey(key, equalTo: value)
       }
     }
+    
+    //Includes
+    if let includeLists = includeKeys {
+        query.includeKeys(includeLists)
+    }
+    
+    //SelectKeys
+    if let selectLists = selectKeys {
+        query.selectKeys(selectLists)
+    }
+    
+    //The network and then fall back to cached data if the network is not available
+    query.cachePolicy = .cacheElseNetwork
+    
     query.findObjectsInBackground { (arrayObjects, error) in
       if let error = error {
         completionHandler(nil, "The query failed \(error.localizedDescription)")
