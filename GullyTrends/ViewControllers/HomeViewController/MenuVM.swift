@@ -22,10 +22,14 @@ class MenuVM {
     
     let includeKeyArray = [Constants.Settings.child]
     
+    //Query Object
+    var queriesObject = Queries()
+    queriesObject.selectionKeys = [QueryTypes.SelectKeys: selectKeyArray,
+                           QueryTypes.IncludeKeys: includeKeyArray]
+    
     //Calling request
     ParseManger.queryWithClass(Constants.ClassNames.K_SETTINGS,
-                               includeKeys: includeKeyArray,
-                               selectKeys: selectKeyArray) { (resultArray, errorMsg) in
+                               queries: queriesObject) { (resultArray, errorMsg) in
                                 DispatchQueue.main.async {
                                   settingsDataCompletionHandler(resultArray, errorMsg)
                                 }                                

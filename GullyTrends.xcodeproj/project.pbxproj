@@ -50,6 +50,7 @@
 		BE29BC1F23AE9FFC00D8B448 /* AugmentedRealityVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE29BC1C23AE9FFC00D8B448 /* AugmentedRealityVM.swift */; };
 		BE29BC2123AEA12800D8B448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE29BC2023AEA12800D8B448 /* AppDelegate.swift */; };
 		BE29BC2323AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE29BC2223AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */; };
+		BE51E45523B6384C00A35162 /* ParseManger+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51E45423B6384C00A35162 /* ParseManger+Query.swift */; };
 		BE96D31C23B3204B007F4DD1 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D31B23B3204B007F4DD1 /* MenuVM.swift */; };
 		BE96D31F23B327CC007F4DD1 /* MyCartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */; };
 		BE96D32123B327DB007F4DD1 /* MyCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32023B327DB007F4DD1 /* MyCartModel.swift */; };
@@ -124,6 +125,7 @@
 		BE29BC1C23AE9FFC00D8B448 /* AugmentedRealityVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AugmentedRealityVM.swift; sourceTree = "<group>"; };
 		BE29BC2023AEA12800D8B448 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE29BC2223AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
+		BE51E45423B6384C00A35162 /* ParseManger+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParseManger+Query.swift"; sourceTree = "<group>"; };
 		BE96D31B23B3204B007F4DD1 /* MenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
 		BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVM.swift; sourceTree = "<group>"; };
 		BE96D32023B327DB007F4DD1 /* MyCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartModel.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 				BE29BC0223AE9FAA00D8B448 /* APIClient.swift */,
 				BE29BC0323AE9FAA00D8B448 /* UserAuthentication.swift */,
 				BE29BC0423AE9FAA00D8B448 /* ParseConstants.swift */,
+				BE51E45423B6384C00A35162 /* ParseManger+Query.swift */,
 			);
 			path = "API Client";
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */,
 				C815792B23A163C4002840BD /* OrderSummaryViewController.swift in Sources */,
 				BE29BC1923AE9FEC00D8B448 /* LoginViewController.swift in Sources */,
+				BE51E45523B6384C00A35162 /* ParseManger+Query.swift in Sources */,
 				BE29BC1723AE9FEC00D8B448 /* UserModel.swift in Sources */,
 				C815792623A16330002840BD /* MyOrdersViewController.swift in Sources */,
 				C815792823A16330002840BD /* WishlistViewController.swift in Sources */,

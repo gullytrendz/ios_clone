@@ -15,7 +15,6 @@ struct ParseKeys {
   static let ServerKey = "http://gullytrendz.herokuapp.com/parse"
 }
 
-
 class ParseManger {
   
   static let shared = ParseManger()
@@ -44,42 +43,6 @@ class ParseManger {
         print("installation save failed %@",error.debugDescription)
       }
     })
-  }
-  
-  static func queryWithClass(_ name: String, queries: [String: String]? = nil, includeKeys: [String]? = nil, selectKeys: [String]? = nil, _ completionHandler: @escaping (_ menuObjects: [PFObject]?, _ errorMsg: String?) -> Void) {
-    let query = PFQuery(className: name)
-    
-    //Equals
-    if let dict = queries {
-      for (key, value) in dict {
-        query.whereKey(key, equalTo: value)
-      }
-    }
-    
-    //Includes
-    if let includeLists = includeKeys {
-        query.includeKeys(includeLists)
-    }
-    
-    //SelectKeys
-    if let selectLists = selectKeys {
-        query.selectKeys(selectLists)
-    }
-    
-    //The network and then fall back to cached data if the network is not available
-    query.cachePolicy = .cacheElseNetwork
-    
-    query.findObjectsInBackground { (arrayObjects, error) in
-      if let error = error {
-        completionHandler(nil, "The query failed \(error.localizedDescription)")
-      } else if let objects = arrayObjects {
-        // The query succeeded with a matching result
-        print(objects.count)
-        completionHandler(objects, nil)
-      } else {
-        completionHandler(nil, "The query succeeded but no matching result was found")
-      }
-    }
   }
   
 }
