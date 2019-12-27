@@ -51,6 +51,8 @@
 		BE29BC2123AEA12800D8B448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE29BC2023AEA12800D8B448 /* AppDelegate.swift */; };
 		BE29BC2323AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE29BC2223AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */; };
 		BE51E45523B6384C00A35162 /* ParseManger+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51E45423B6384C00A35162 /* ParseManger+Query.swift */; };
+		BE51E45723B66C9B00A35162 /* FliterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51E45623B66C9B00A35162 /* FliterVM.swift */; };
+		BE51E45923B671FC00A35162 /* FliterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE51E45823B671FC00A35162 /* FliterModel.swift */; };
 		BE96D31C23B3204B007F4DD1 /* MenuVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D31B23B3204B007F4DD1 /* MenuVM.swift */; };
 		BE96D31F23B327CC007F4DD1 /* MyCartVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */; };
 		BE96D32123B327DB007F4DD1 /* MyCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32023B327DB007F4DD1 /* MyCartModel.swift */; };
@@ -126,6 +128,8 @@
 		BE29BC2023AEA12800D8B448 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE29BC2223AEA13300D8B448 /* client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_571839247263-ut27jh6e0mmp226lvc26taolpej2hc0k.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		BE51E45423B6384C00A35162 /* ParseManger+Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParseManger+Query.swift"; sourceTree = "<group>"; };
+		BE51E45623B66C9B00A35162 /* FliterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FliterVM.swift; sourceTree = "<group>"; };
+		BE51E45823B671FC00A35162 /* FliterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FliterModel.swift; sourceTree = "<group>"; };
 		BE96D31B23B3204B007F4DD1 /* MenuVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVM.swift; sourceTree = "<group>"; };
 		BE96D31E23B327CC007F4DD1 /* MyCartVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartVM.swift; sourceTree = "<group>"; };
 		BE96D32023B327DB007F4DD1 /* MyCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartModel.swift; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 				71E05F32239BB2AD0069C6E3 /* FilterViewController.h */,
 				71E05F33239BB2AD0069C6E3 /* FilterViewController.m */,
 				71E05F34239BB2AD0069C6E3 /* FilterViewController.xib */,
+				BE51E45623B66C9B00A35162 /* FliterVM.swift */,
+				BE51E45823B671FC00A35162 /* FliterModel.swift */,
 			);
 			path = FilterViewController;
 			sourceTree = "<group>";
@@ -558,10 +564,12 @@
 				71E05F35239BB2AD0069C6E3 /* FilterViewController.m in Sources */,
 				BE29BC0F23AE9FCA00D8B448 /* Constants.swift in Sources */,
 				BE96D31F23B327CC007F4DD1 /* MyCartVM.swift in Sources */,
+				BE51E45923B671FC00A35162 /* FliterModel.swift in Sources */,
 				71C3EC462369BF3200206690 /* MainViewController.m in Sources */,
 				BE29BC0523AE9FAB00D8B448 /* UserAuthentication+Parse.swift in Sources */,
 				C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */,
 				BE29BC1D23AE9FFC00D8B448 /* AugmentedRealityModel.swift in Sources */,
+				BE51E45723B66C9B00A35162 /* FliterVM.swift in Sources */,
 				C815792923A16330002840BD /* WishlistCollectionViewCell.swift in Sources */,
 				C815792523A16330002840BD /* MyCartViewController.swift in Sources */,
 				71C3EC4A2369BF4B00206690 /* SWRevealViewController.m in Sources */,

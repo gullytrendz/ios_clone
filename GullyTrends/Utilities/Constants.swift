@@ -24,6 +24,14 @@ struct Constants {
     static let type = "type"
     static let child = "child"
     static let menu = "menu"
+    //Filter
+    static let size = "size"
+    static let material = "material"
+    static let brand = "brand"
+    static let color = "color"
+    static let sorting = "sorting"
+    static let pattern = "pattern"
+
   }
   
   //Table Class Name Keys
