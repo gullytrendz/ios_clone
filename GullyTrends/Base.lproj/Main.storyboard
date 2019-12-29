@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -447,7 +447,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-7i-wlW">
-                                        <rect key="frame" x="129" y="11" width="40" height="38"/>
+                                        <rect key="frame" x="129" y="11" width="40" height="38.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Th4-gW-Zka"/>
                                             <constraint firstAttribute="width" constant="40" id="smF-tD-eVy"/>
@@ -654,7 +654,7 @@
                                 <rect key="frame" x="0.0" y="151" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5PA-zg-NkQ" id="yOb-Sh-twj">
-                                    <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="347.5" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmC-b8-tgK">
@@ -2839,7 +2839,7 @@
                                                             <state key="normal" backgroundImage="love-icon"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-Sf-gfY">
-                                                            <rect key="frame" x="190" y="154.5" width="30" height="30.5"/>
+                                                            <rect key="frame" x="190" y="154" width="30" height="31"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="WfG-hn-0Zy"/>
                                                                 <constraint firstAttribute="width" constant="30" id="h0u-gk-mYh"/>
@@ -2957,7 +2957,7 @@
         <image name="bg-icons" width="320" height="569"/>
         <image name="book-tailor" width="27" height="22.5"/>
         <image name="cart-bag-icon" width="19" height="22.5"/>
-        <image name="cart-icon" width="17" height="20.5"/>
+        <image name="cart-icon" width="18.5" height="23"/>
         <image name="checked.png" width="24.5" height="24.5"/>
         <image name="fb-btn" width="109" height="56"/>
         <image name="filter-icon" width="14" height="9"/>
@@ -2965,9 +2965,9 @@
         <image name="girl" width="42" height="42"/>
         <image name="google-btn" width="110" height="56"/>
         <image name="location-icon" width="13.5" height="19"/>
-        <image name="logo" width="190.5" height="90.5"/>
+        <image name="logo" width="90.5" height="44"/>
         <image name="love-icon" width="13.5" height="12"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="60"/>
         <image name="menu" width="22" height="22"/>
         <image name="menu-icon" width="22" height="15"/>
         <image name="menu_cart-icon" width="18.5" height="23"/>
