@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="bvA-Gx-XPl">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -386,7 +386,7 @@
         <!--Main View Controller-->
         <scene sceneID="jZ6-Nu-3CT">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" id="Z2I-Sz-A3d" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="Z2I-Sz-A3d" customClass="MainViewController" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RX0-GO-ibe"/>
                         <viewControllerLayoutGuide type="bottom" id="X92-Ax-75B"/>
@@ -598,8 +598,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="gU3-AX-YMu" id="lHd-3a-aOj"/>
-                        <outlet property="sidebarButton" destination="DJB-Dc-VO5" id="S0X-A3-1V6"/>
+                        <outlet property="productscollectionView" destination="gU3-AX-YMu" id="tNe-Gb-na7"/>
+                        <outlet property="sidebarButton" destination="DJB-Dc-VO5" id="5bR-n0-Ypx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWP-sa-Vux" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -609,7 +609,7 @@
         <!--Menu View Controller-->
         <scene sceneID="EDl-71-Ti2">
             <objects>
-                <tableViewController title="Menu View Controller" id="x2r-rU-PsL" customClass="SidebarTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SidebarTableViewController" title="Menu View Controller" id="x2r-rU-PsL" customClass="SidebarTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FPA-C9-aqA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -689,7 +689,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCz-Kj-4H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="-771"/>
+            <point key="canvasLocation" x="1770" y="-778"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cWg-6b-WRA">
@@ -1784,7 +1784,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qB7-6I-SSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2657" y="-771"/>
+            <point key="canvasLocation" x="2622" y="-723"/>
         </scene>
         <!--My Cart View Controller-->
         <scene sceneID="Zhf-7p-0DV">
@@ -2957,7 +2957,7 @@
         <image name="bg-icons" width="320" height="569"/>
         <image name="book-tailor" width="27" height="22.5"/>
         <image name="cart-bag-icon" width="19" height="22.5"/>
-        <image name="cart-icon" width="17" height="20.5"/>
+        <image name="cart-icon" width="18.5" height="23"/>
         <image name="checked.png" width="24.5" height="24.5"/>
         <image name="fb-btn" width="109" height="56"/>
         <image name="filter-icon" width="14" height="9"/>
@@ -2965,7 +2965,7 @@
         <image name="girl" width="42" height="42"/>
         <image name="google-btn" width="110" height="56"/>
         <image name="location-icon" width="13.5" height="19"/>
-        <image name="logo" width="190.5" height="90.5"/>
+        <image name="logo" width="90.5" height="44"/>
         <image name="love-icon" width="13.5" height="12"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="menu" width="22" height="22"/>
