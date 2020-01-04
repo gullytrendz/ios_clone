@@ -60,9 +60,9 @@ class LoginViewController: UIViewController {
   }
   
   @IBAction func tapOnLogin(_ sender: UIButton) {
-//    AlertUtilities.showAlert(message: "In progrss Login with OTP \n Try with Google/FB") { _ in }
-    let mainVC = FilterViewController(nibName:"FilterViewController", bundle:nil)
-    self.navigationController?.pushViewController(mainVC, animated: true);
+    AlertUtilities.showAlert(message: "In progrss Login with OTP \n Try with Google/FB") { _ in }
+//    let mainVC = FilterViewController(nibName:"FilterViewController", bundle:nil)
+//    self.navigationController?.pushViewController(mainVC, animated: true);
 
   }
   
