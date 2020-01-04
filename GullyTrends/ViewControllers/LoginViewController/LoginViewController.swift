@@ -55,11 +55,15 @@ class LoginViewController: UIViewController {
   
   // MARK: - Actions
   @IBAction func tapOnSocailLogin(_ sender: UIButton) {
-    userAuthentication.socialSignOn(type: SignOnMode(rawValue: sender.tag)!)
+   userAuthentication.socialSignOn(type: SignOnMode(rawValue: sender.tag)!)
+
   }
   
   @IBAction func tapOnLogin(_ sender: UIButton) {
-    AlertUtilities.showAlert(message: "In progrss Login with OTP \n Try with Google/FB") { _ in }
+//    AlertUtilities.showAlert(message: "In progrss Login with OTP \n Try with Google/FB") { _ in }
+    let mainVC = FilterViewController(nibName:"FilterViewController", bundle:nil)
+    self.navigationController?.pushViewController(mainVC, animated: true);
+
   }
   
   private func navigateToAugmentedReality() {
