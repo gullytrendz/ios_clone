@@ -10,22 +10,21 @@ import Foundation
 
 class SideMenuVM {
     
-    
-    func createData() -> [String: [String]] {
-        var dataArray = [String: [String]]()
-        dataArray["Men's"] = ["Shirts", "T-Shirts", "Jeans", "Kurta"]
-        dataArray["Women's"] = ["Jeans", "Kurta"]
-        dataArray["Kids"] = ["T Shirts", "Jeans"]
-        dataArray["Designer Studios"] = ["Kurta"]
-        dataArray["Home Shopping"] = []
-        dataArray["Sell On Gully"] = []
-        dataArray["Buy Wholesale"] = []
-        dataArray["Customer Care"] = []
-        dataArray["Buy Wholesale"] = []
-        dataArray["Return Policy"] = []
-        dataArray["FAQS"] = []
-        dataArray["About & Policies"] = []
-        return dataArray
+    func getMenuData() -> [String: [MenuModel]] {
+        var menuData = [String: [MenuModel]]()
+        MenuVM.getSettingsLists { (settingsArray, errorMsg) in
+            guard errorMsg == nil else {
+                AlertUtilities.showAlert(message: errorMsg!) { _ in }
+                return
+            }
+            
+            //Filter menu type list from Settings
+            MenuVM.getMenuList(array: settingsArray) { (menuArray) in
+                print(menuArray)
+                menuData = menuArray
+            }
+        }
+        return menuData
     }
 
 }

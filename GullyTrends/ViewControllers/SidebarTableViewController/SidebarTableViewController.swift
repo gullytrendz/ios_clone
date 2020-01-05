@@ -20,6 +20,7 @@ class SidebarTableViewController: UIViewController {
     private var pluisMinusLbl: UILabel?
     @IBOutlet private var sideMenuTableView: UITableView!
     private var menuItems: [String]?
+    var dataArray = [String: [MenuModel]]()
     lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
@@ -32,6 +33,7 @@ class SidebarTableViewController: UIViewController {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataArray = SideMenuVM().getMenuData()
         sectionNames = [
         "Men's",
         "Women's",
