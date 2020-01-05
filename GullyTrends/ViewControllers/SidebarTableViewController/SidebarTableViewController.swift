@@ -11,15 +11,25 @@ import UIKit
 private let kHeaderSectionTag = 6900
 
 class SidebarTableViewController: UIViewController {
-       private var expandedSectionHeaderNumber = 0
-       private var expandedSectionHeader: UITableViewHeaderFooterView?
-       private var sectionItems: [[String]]?
-       private var sectionNames: [String]?
-       private var onlySectionmenuitems: [String]?
-       private var sectionimages: [String]?
-       private var pluisMinusLbl: UILabel?
-       @IBOutlet private var sideMenuTableView: UITableView!
-       private var menuItems: [String]?
+    private var expandedSectionHeaderNumber = 0
+    private var expandedSectionHeader: UITableViewHeaderFooterView?
+    private var sectionItems: [[String]]?
+    private var sectionNames: [String]?
+    //private var onlySectionmenuitems: [String]?
+    private var sectionimages: [String]?
+    private var pluisMinusLbl: UILabel?
+    @IBOutlet private var sideMenuTableView: UITableView!
+    private var menuItems: [String]?
+    lazy var messageLabel: UILabel = {
+        let label = UILabel()
+        label.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
+        label.text = "Retrieving data.\nPlease wait."
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.font = UIFont(name: "Helvetica Neue", size: 20)
+        label.sizeToFit()
+        return label
+    }()
     override func viewDidLoad() {
         super.viewDidLoad()
         sectionNames = [
@@ -47,52 +57,53 @@ class SidebarTableViewController: UIViewController {
         ]
 
         sectionItems = [
-        ["Shirts", "T-Shirts", "Jeans", "Kurta"],
-        ["Jeans", "Kurta"],
-        ["T Shirts", "Jeans"],
-        ["Kurta"]
+            ["Shirts", "T-Shirts", "Jeans", "Kurta"],
+            ["Jeans", "Kurta"],
+            ["T Shirts", "Jeans"],
+            ["Kurta"]
         ]
-
-        onlySectionmenuitems = [
-        "Home Shopping",
-        "Sell On Gully",
-        "Buy Wholesale",
-        "Customer Care",
-        "Return Policy",
-        "FAQS",
-        "About & Policies"
-        ]
+        
+       /* onlySectionmenuitems = [
+            "Home Shopping",
+            "Sell On Gully",
+            "Buy Wholesale",
+            "Customer Care",
+            "Return Policy",
+            "FAQS",
+            "About & Policies"
+        ]*/
         // configure the tableview
         sideMenuTableView.tableFooterView = UIView(frame: CGRect.zero)
         sideMenuTableView.rowHeight = UITableView.automaticDimension
         sideMenuTableView.estimatedRowHeight = 100
         expandedSectionHeaderNumber = -1
         sideMenuTableView.backgroundColor = UIColor(red: 80.0 / 255.0, green: 24 / 255.0, blue: 133 / 255.0, alpha: 1.0)
+        sideMenuTableView.register(SideMenuViewCell.self, forCellReuseIdentifier: SideMenuViewCell.reuseIdentifier)
         menuItems = ["title", "comments", "wishlist", "tag"]
         // [self applyGradientEffect];
         // Do any additional setup after loading the view.
     }
-    func applyGradientEffect() {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-        let gradient = CAGradientLayer()
-        gradient.frame = view.bounds
-        gradient.startPoint = CGPoint.zero
-        gradient.endPoint = CGPoint(x: 0, y: 1)
-        gradient.colors = [(UIColor(red: 80 / 255.0, green: 24 / 255.0, blue: 133 / 255.0, alpha: 1.0)).cgColor, (UIColor(red: 14.0 / 255.0, green: 27.0 / 255.0, blue: 96 / 255.0, alpha: 1.0)).cgColor].compactMap { $0 }
-        self.view.layer.insertSublayer(gradient, at: 0)
-    }
-
-  
+    //    func applyGradientEffect() {
+    //        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+    //        let gradient = CAGradientLayer()
+    //        gradient.frame = view.bounds
+    //        gradient.startPoint = CGPoint.zero
+    //        gradient.endPoint = CGPoint(x: 0, y: 1)
+    //        gradient.colors = [(UIColor(red: 80 / 255.0, green: 24 / 255.0, blue: 133 / 255.0, alpha: 1.0)).cgColor, (UIColor(red: 14.0 / 255.0, green: 27.0 / 255.0, blue: 96 / 255.0, alpha: 1.0)).cgColor].compactMap { $0 }
+    //        self.view.layer.insertSublayer(gradient, at: 0)
+    //    }
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 extension SidebarTableViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -101,13 +112,7 @@ extension SidebarTableViewController: UITableViewDelegate, UITableViewDataSource
             self.sideMenuTableView.backgroundView = nil
             return sectionNames?.count ?? 0
         } else {
-            let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height))
-
-            messageLabel.text = "Retrieving data.\nPlease wait."
-            messageLabel.numberOfLines = 0
-            messageLabel.textAlignment = .center
-            messageLabel.font = UIFont(name: "Helvetica Neue", size: 20)
-            messageLabel.sizeToFit()
+          
             self.sideMenuTableView.backgroundView = messageLabel
 
             return 0
@@ -149,24 +154,22 @@ extension SidebarTableViewController: UITableViewDelegate, UITableViewDataSource
             header?.addSubview(theImageView)
         }
 
-        let searchstring = header?.textLabel?.text?.replacingOccurrences(of: "         ", with: "")
-        if !(onlySectionmenuitems?.contains(searchstring ?? "") ?? false) {
-            pluisMinusLbl = UILabel(frame: CGRect(x: 220, y: 8, width: 25, height: 25))
-            pluisMinusLbl?.text = "+"
-            pluisMinusLbl?.textColor = UIColor.white
-            header?.addSubview(pluisMinusLbl ?? UILabel())
-        }
+        //let searchstring = header?.textLabel?.text?.replacingOccurrences(of: "         ", with: "")
+        //if !(onlySectionmenuitems?.contains(searchstring ?? "") ?? false) {
+         //   pluisMinusLbl = UILabel(frame: CGRect(x: 220, y: 8, width: 25, height: 25))
+         //   pluisMinusLbl?.text = "+"
+         //   pluisMinusLbl?.textColor = UIColor.white
+         //   header?.addSubview(pluisMinusLbl ?? UILabel())
+       // }
         header?.tag = section
         let headerTapGesture = UITapGestureRecognizer(target: self, action: #selector(sectionHeaderWasTouched(_:)))
         header?.addGestureRecognizer(headerTapGesture)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! SideMenuViewCell
         let section = sectionItems?[indexPath.section]
-        cell.contentView.backgroundColor = UIColor(red: 80.0 / 255.0, green: 24 / 255.0, blue: 133 / 255.0, alpha: 1.0)
-        cell.textLabel?.textColor = UIColor.white
-        cell.textLabel?.text = "\(            section?[indexPath.row] ?? "")"
+        cell.configure(text: section?[indexPath.row] ?? "")
         return cell
     }
     
@@ -179,11 +182,11 @@ extension SidebarTableViewController: UITableViewDelegate, UITableViewDataSource
         let headerView = sender?.view as? UITableViewHeaderFooterView
         let section = headerView?.tag ?? 0
 
-        let searchstring = headerView?.textLabel?.text?.replacingOccurrences(of: "         ", with: "")
-        if onlySectionmenuitems?.contains(searchstring ?? "") ?? false {
-            performSegue(withIdentifier: "segueID", sender: self)
-            return
-        }
+//        let searchstring = headerView?.textLabel?.text?.replacingOccurrences(of: "         ", with: "")
+//        if onlySectionmenuitems?.contains(searchstring ?? "") ?? false {
+////            performSegue(withIdentifier: "segueID", sender: self)
+//            return
+//        }
         let eImageView = headerView?.viewWithTag(kHeaderSectionTag + section) as? UIImageView
         expandedSectionHeader = headerView
 
@@ -211,10 +214,10 @@ extension SidebarTableViewController: UITableViewDelegate, UITableViewDataSource
         destViewController?.title = (sectionNames?[indexPath?.row ?? 0])?.capitalized
 
         // Set the photo if it navigates to the PhotoView
-        if (segue.identifier == "segueID") {
-            let searchVC = SearchProductViewController()
-            navigationController?.pushViewController(searchVC, animated: true)
-        }
+//        if (segue.identifier == "segueID") {
+//            let searchVC = SearchProductViewController()
+//            navigationController?.pushViewController(searchVC, animated: true)
+//        }
     }
     func tableViewCollapeSection(_ section: Int, withImage imageView: UIImageView?) {
         let sectionData = sectionItems?[section]

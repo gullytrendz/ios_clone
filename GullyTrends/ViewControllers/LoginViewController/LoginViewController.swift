@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
   }
   
   private func navigateToDashboard() {
-    let aVC = MainViewController.load(from: STORYBOARD.Main)
+    let aVC = MainView.load(from: STORYBOARD.Main)
     self.navigationController?.pushViewController(aVC!, animated: true)
   }
   
