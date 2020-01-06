@@ -47,6 +47,24 @@ class LoginViewController: BaseViewController {
         AlertUtilities.showAlert(message: errorMsg!) { _ in }
         return
       }
+     
+    /* ParseManger.shared.settingsArray = settingsArray
+
+     
+     let productId = "xrWQ3PXpuL"
+     let product = ParseManger.shared.settingsArray?.filter({$0.objectId == productId}).first
+     
+     let sizeId = "e7hhCUgPKy"
+     let sizeArray = ParseManger.shared.settingsArray?.filter({$0.objectId == sizeId})
+     
+     var productModel = ProductModel()
+     productModel.category = product
+     productModel.size = sizeArray
+
+     ProductsVM.getProductLists(productModel) { _,_ in
+       
+     }*/
+
       
       //Filter menu type list from Settings
       MenuVM.getMenuList(array: settingsArray) { (menuArray) in

@@ -34,6 +34,18 @@ struct Constants {
 
   }
   
+  //Settings Keys
+  struct Products {
+   
+    static let discount = "discount"
+    static let price = "price"
+    static let title = "title"
+    static let images = "images"
+    static let size = "size"
+    static let store = "store"
+    static let category = "category"
+  }
+  
   //Table Class Name Keys
   struct ClassNames {
     static let K_SETTINGS = "Settings"
