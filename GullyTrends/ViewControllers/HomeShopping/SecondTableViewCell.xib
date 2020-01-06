@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SecondTableViewCell" rowHeight="89" id="KGk-i7-Jjw" customClass="SecondTableViewCell" customModule="GullyTrends" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="311" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="311" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qt5-ZY-3hq" customClass="CustomView">
+                        <rect key="frame" x="10" y="5" width="296" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sanvi Fashion Botique" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKM-l8-xQ1">
+                                <rect key="frame" x="67" y="31" width="150.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjQ-Kb-bX5">
+                                <rect key="frame" x="271" y="55" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="jeD-rs-xng"/>
+                                    <constraint firstAttribute="width" constant="20" id="roj-kl-M1w"/>
+                                </constraints>
+                                <color key="tintColor" red="0.29604125019999999" green="0.089504100380000007" blue="0.49808865790000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="card-expand-icon"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="S1z-2m-m5a">
+                                <rect key="frame" x="10" y="19" width="42" height="42"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XUW-L7-ayL">
+                                <rect key="frame" x="187" y="5" width="80" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-fill" translatesAutoresizingMaskIntoConstraints="NO" id="vPR-Cj-Aah">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="20"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-fill" translatesAutoresizingMaskIntoConstraints="NO" id="oBU-q7-U3C">
+                                        <rect key="frame" x="16" y="0.0" width="16" height="20"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-fill" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-9W-0kW">
+                                        <rect key="frame" x="32" y="0.0" width="16" height="20"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-outline" translatesAutoresizingMaskIntoConstraints="NO" id="oDK-dX-NQo">
+                                        <rect key="frame" x="48" y="0.0" width="16" height="20"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-outline" translatesAutoresizingMaskIntoConstraints="NO" id="Syy-wo-aYC">
+                                        <rect key="frame" x="64" y="0.0" width="16" height="20"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="nuw-c3-4C7"/>
+                                    <constraint firstAttribute="width" constant="80" id="tf1-CR-vVN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="XUW-L7-ayL" secondAttribute="trailing" constant="29" id="18Z-QL-9o8"/>
+                            <constraint firstItem="S1z-2m-m5a" firstAttribute="centerY" secondItem="qt5-ZY-3hq" secondAttribute="centerY" id="Jbx-ZT-VCR"/>
+                            <constraint firstAttribute="height" constant="80" id="SPA-RS-TbC"/>
+                            <constraint firstItem="S1z-2m-m5a" firstAttribute="leading" secondItem="qt5-ZY-3hq" secondAttribute="leading" constant="10" id="SpN-19-xX7"/>
+                            <constraint firstItem="XUW-L7-ayL" firstAttribute="top" secondItem="qt5-ZY-3hq" secondAttribute="top" constant="5" id="UX2-pf-iUr"/>
+                            <constraint firstAttribute="bottom" secondItem="xjQ-Kb-bX5" secondAttribute="bottom" constant="5" id="YrT-Hf-gfj"/>
+                            <constraint firstAttribute="trailing" secondItem="xjQ-Kb-bX5" secondAttribute="trailing" constant="5" id="l1z-5Z-0iN"/>
+                            <constraint firstItem="fKM-l8-xQ1" firstAttribute="centerY" secondItem="qt5-ZY-3hq" secondAttribute="centerY" id="mAp-gh-cgv"/>
+                            <constraint firstItem="fKM-l8-xQ1" firstAttribute="leading" secondItem="S1z-2m-m5a" secondAttribute="trailing" constant="15" id="mgp-QC-ggy"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="qt5-ZY-3hq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="0VD-kT-6bT"/>
+                    <constraint firstAttribute="bottom" secondItem="qt5-ZY-3hq" secondAttribute="bottom" constant="5" id="Ua5-ap-va8"/>
+                    <constraint firstItem="qt5-ZY-3hq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="aBK-Cg-Lw0"/>
+                    <constraint firstAttribute="trailing" secondItem="qt5-ZY-3hq" secondAttribute="trailing" constant="5" id="feY-5L-GDF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblTitle" destination="fKM-l8-xQ1" id="5MV-4d-Plq"/>
+                <outlet property="secBtn" destination="xjQ-Kb-bX5" id="wuI-xI-rMM"/>
+            </connections>
+            <point key="canvasLocation" x="45.652173913043484" y="67.633928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="card-expand-icon" width="19.5" height="19.5"/>
+        <image name="girl" width="42" height="42"/>
+        <image name="star-fill" width="11" height="10"/>
+        <image name="star-outline" width="11" height="10"/>
+    </resources>
+</document>
