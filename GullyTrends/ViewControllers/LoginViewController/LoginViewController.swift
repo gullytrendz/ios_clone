@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
   
   // MARK: - Properties
   @IBOutlet weak var userNameTF: UITextField!
@@ -18,6 +18,9 @@ class LoginViewController: UIViewController {
   // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    //Hide nav bar
+    isHiddenNavbar()
     
     //UserAuthentication
     userAuthentication = UserAuthentication()
@@ -72,7 +75,7 @@ class LoginViewController: UIViewController {
   }
   
   private func navigateToDashboard() {
-    let aVC = MainView.load(from: STORYBOARD.Main)
+    let aVC = SWRevealViewController.load(from: STORYBOARD.Main)
     self.navigationController?.pushViewController(aVC!, animated: true)
   }
   

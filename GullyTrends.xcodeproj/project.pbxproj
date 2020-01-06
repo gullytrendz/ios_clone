@@ -62,6 +62,7 @@
 		BE96D32123B327DB007F4DD1 /* MyCartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32023B327DB007F4DD1 /* MyCartModel.swift */; };
 		BE96D32323B37497007F4DD1 /* ProductsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32223B37497007F4DD1 /* ProductsVM.swift */; };
 		BE96D32523B43D6E007F4DD1 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE96D32423B43D6E007F4DD1 /* MenuModel.swift */; };
+		BED2C9F723C2B65C003DA9B4 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED2C9F623C2B65C003DA9B4 /* BaseViewController.swift */; };
 		C815792423A16330002840BD /* MyCartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */; };
 		C815792523A16330002840BD /* MyCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815791F23A16330002840BD /* MyCartViewController.swift */; };
 		C815792623A16330002840BD /* MyOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C815792023A16330002840BD /* MyOrdersViewController.swift */; };
@@ -147,6 +148,7 @@
 		BE96D32023B327DB007F4DD1 /* MyCartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartModel.swift; sourceTree = "<group>"; };
 		BE96D32223B37497007F4DD1 /* ProductsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVM.swift; sourceTree = "<group>"; };
 		BE96D32423B43D6E007F4DD1 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		BED2C9F623C2B65C003DA9B4 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C815791D23A1632F002840BD /* GullyTrends-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GullyTrends-Bridging-Header.h"; sourceTree = "<group>"; };
 		C815791E23A16330002840BD /* MyCartCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartCollectionViewCell.swift; sourceTree = "<group>"; };
 		C815791F23A16330002840BD /* MyCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCartViewController.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				BE29BC1623AE9FEC00D8B448 /* LoginViewController.swift */,
 				BE29BC1523AE9FEC00D8B448 /* LoginVM.swift */,
 				BE29BC1423AE9FEB00D8B448 /* UserModel.swift */,
+				BED2C9F623C2B65C003DA9B4 /* BaseViewController.swift */,
 			);
 			path = LoginViewController;
 			sourceTree = "<group>";
@@ -590,13 +593,13 @@
 				718C251B23C0587600750A31 /* RightTableViewCell.swift in Sources */,
 				BE29BC1323AE9FCA00D8B448 /* ViewController+Extension.swift in Sources */,
 				71E860102389C1C000D60A38 /* CustomView.m in Sources */,
-				71E05F35239BB2AD0069C6E3 /* FilterViewController.m in Sources */,
 				C8D6FED523C19FF700659E68 /* MainViewCell.swift in Sources */,
 				BE29BC0F23AE9FCA00D8B448 /* Constants.swift in Sources */,
 				BE96D31F23B327CC007F4DD1 /* MyCartVM.swift in Sources */,
 				BE51E45923B671FC00A35162 /* FliterModel.swift in Sources */,
 				71C3EC462369BF3200206690 /* MainViewController1.m in Sources */,
 				C8D6FED923C1BD3A00659E68 /* SideMenuVM.swift in Sources */,
+				BED2C9F723C2B65C003DA9B4 /* BaseViewController.swift in Sources */,
 				BE29BC0523AE9FAB00D8B448 /* UserAuthentication+Parse.swift in Sources */,
 				C8CFB7FD238B0310004C1A0C /* ProductCollectionViewCell.m in Sources */,
 				718C251423C057F600750A31 /* FilterViewController.swift in Sources */,
