@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Men's",
+    "icon": "mens-icon"
+  },
+  {
+    "name": "Women's",
+    "icon": "womens-icon"
+  },
+  {
+    "name": "Kids",
+    "icon": "kids-icon"
+  },
+  {
+    "name": "Designer Studios",
+    "icon": "designer-icon"
+  },
+  {
+    "name": "Home Shopping",
+    "icon": "menu_home-shopping"
+  },
+  {
+    "name": "Sell On Gully",
+    "icon": "menu_sell-on-gully-icon"
+  },
+  {
+    "name": "Buy Wholesale",
+    "icon": "menu_buy-wholesale-icon"
+  },
+  {
+    "name": "Customer Care",
+    "icon": ""
+  },
+  {
+    "name": "Return Policy",
+    "icon": ""
+  },
+  {
+    "name": "FAQS",
+    "icon": ""
+  },
+  {
+    "name": "About & Policies",
+    "icon": ""
+  }
+]

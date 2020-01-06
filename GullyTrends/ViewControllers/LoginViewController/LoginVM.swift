@@ -9,7 +9,25 @@
 import UIKit
 import Parse
 
+enum USER_NAVIGATION: Int {
+  case None = -1
+  case AugmentedReality = 0
+  case Dashboard = 1
+}
+
 class LoginVM {
 
+  static func fetchSettingsData(completionHander: @escaping(_ status: Bool) -> Void) {
+    MenuVM.getSettingsLists { (settingsArray, errorMsg) in
+      guard errorMsg == nil else {
+        //AlertUtilities.showAlert(message: errorMsg!) { _ in }
+        print(errorMsg!)
+        completionHander(false)
+        return
+      }
+      ParseManger.shared.settingsArray = settingsArray
+      completionHander(true)
+    }
+  }
   
 }

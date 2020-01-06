@@ -10,21 +10,24 @@ import Foundation
 
 class SideMenuVM {
     
-    func getMenuData() -> [String: [MenuModel]] {
-        var menuData = [String: [MenuModel]]()
-        MenuVM.getSettingsLists { (settingsArray, errorMsg) in
-            guard errorMsg == nil else {
-                AlertUtilities.showAlert(message: errorMsg!) { _ in }
-                return
-            }
-            
-            //Filter menu type list from Settings
-            MenuVM.getMenuList(array: settingsArray) { (menuArray) in
-                print(menuArray)
-                menuData = menuArray
-            }
-        }
-        return menuData
+  static func getMenuData() -> [SideMenuModel] {
+    let url = Bundle.main.url(forResource: "Menu", withExtension: "json")
+    do {
+      let jsonData = try Data(contentsOf: url!)
+      let decoder = JSONDecoder()
+      let jsonModel = try decoder.decode([SideMenuModel].self, from: jsonData)
+      
+      
+      return jsonModel
     }
-
+    catch {
+      print(error)
+    }
+    return [SideMenuModel]()
+  }
+  
+  
+  
+  
+  
 }
