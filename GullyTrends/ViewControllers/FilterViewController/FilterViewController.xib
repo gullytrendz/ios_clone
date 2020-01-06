@@ -9,8 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FilterViewController">
             <connections>
-                <outlet property="leftTableView" destination="zVv-Aj-e95" id="yZb-EH-fiu"/>
-                <outlet property="rightTableview" destination="SQj-zZ-P3Z" id="qZ7-MM-pfA"/>
+                <outlet property="leftTableView" destination="zVv-Aj-e95" id="EzI-R0-4HZ"/>
+                <outlet property="rightTableview" destination="SQj-zZ-P3Z" id="nbn-j7-IIW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,8 +27,8 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <connections>
-                                <outlet property="dataSource" destination="-1" id="SIy-6H-7xJ"/>
-                                <outlet property="delegate" destination="-1" id="uSX-FS-oU9"/>
+                                <outlet property="dataSource" destination="-1" id="iSM-ma-gcw"/>
+                                <outlet property="delegate" destination="-1" id="cRO-be-4Ue"/>
                             </connections>
                         </tableView>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SQj-zZ-P3Z">
@@ -36,8 +36,8 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <connections>
-                                <outlet property="dataSource" destination="-1" id="udt-dL-Ray"/>
-                                <outlet property="delegate" destination="-1" id="ygZ-jF-zUf"/>
+                                <outlet property="dataSource" destination="-1" id="qMO-od-xjA"/>
+                                <outlet property="delegate" destination="-1" id="oyf-0l-lSf"/>
                             </connections>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTQ-08-kHG">
@@ -69,7 +69,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Kg8-US-mrM" secondAttribute="trailing" id="qbJ-ec-BgS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="138.40000000000001" y="117.39130434782609"/>
+            <point key="canvasLocation" x="436" y="117"/>
         </view>
     </objects>
 </document>
