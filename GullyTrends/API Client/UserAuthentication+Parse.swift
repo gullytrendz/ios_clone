@@ -20,11 +20,6 @@ extension UserAuthentication {
                                 self.completionHandler(true, nil)
                                 return
                               }
-                              guard error?.message == nil else {
-                                // Show the errorString somewhere and let the user try again.
-                                self.completionHandler(false, error?.message)
-                                return
-                              }
                               // The login failed. Check error to see why.
                               self.userRegistration()
     }
@@ -37,9 +32,9 @@ extension UserAuthentication {
     aUserInfo?.email = userModel.email
     aUserInfo?.password = userModel.password
     aUserInfo?.signUpInBackground { (succeeded, error) in
-      guard error?.message == nil else {
+      guard error?.message == nil && error?.code == 202 else {
         // Show the errorString somewhere and let the user try again.
-        self.completionHandler(false, error?.message)
+        self.completionHandler(false, "Invalid Username/Password.")
         return
       }
       // Hooray! Let them use the app now.
