@@ -6,7 +6,7 @@
 //  Copyright © 2019 Lakshmi Vajrapu. All rights reserved.
 //
 
-#import "SidebarTableViewController.h"
+#import "SidebarTableViewController1.h"
 #import "SWRevealViewController.h"
 #import "SearchProductViewController.h"
 static int const kHeaderSectionTag = 6900;
