@@ -7,22 +7,49 @@
 //
 
 import UIKit
+import Parse
 
 class FilterViewController: UIViewController , UITableViewDelegate , UITableViewDataSource{
     
     @IBOutlet var leftTableView: UITableView!
     @IBOutlet var rightTableview: UITableView!
     
-    var leftdataArray:NSMutableArray = ["Color","Material","Size","Sorting","Pattern","Type","Brand"];
-    var rightdataArray:NSMutableArray = ["Color","Material","Size","Sorting","Pattern","Type","Brand"];
+    var leftdataArray:Array<String> = [];
+    var rightdataArray:Array<PFObject> = [];
     var selectedrighttindexs:NSMutableArray = []
     var preselectedrighttindexs:NSMutableArray = []
     var selectedindexs = [NSInteger:Any]()
     var selectedleftindex:NSInteger = 0
+    var filtermodelObjects:FliterModel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+           //Initial call request Settings pull the all records
+           MenuVM.getSettingsLists { (settingsArray, errorMsg) in
+             guard errorMsg == nil else {
+               AlertUtilities.showAlert(message: errorMsg!) { _ in }
+               return
+             }
+             
+             //Filter menu type list from Settings
+            FliterVM.getFliterList(array: settingsArray) { (filterarray) in
+                print(filterarray)
+                self.filtermodelObjects = filterarray
+                self.leftdataArray = Array(filterarray.dictionary!.keys)
+                self.rightdataArray = filterarray.dictionary![self.leftdataArray[0]]!
+                self.leftTableView.reloadData()
+                self.rightTableview.reloadData()
+                
+            }
+            
+            }
+               
+           }
+           
+    override func viewWillAppear(_ animated: Bool) {
         
         leftTableView.register(UINib(nibName: "LeftTableViewCell", bundle: nil), forCellReuseIdentifier: "LeftTableViewCell")
         rightTableview.register(UINib(nibName: "RightTableViewCell", bundle: nil), forCellReuseIdentifier: "RightTableViewCell")
@@ -31,15 +58,15 @@ class FilterViewController: UIViewController , UITableViewDelegate , UITableView
         rightTableview.delegate = self
         
         rightTableview.setEditing(true, animated: true)
-       
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView == leftTableView {
-              return leftdataArray.count
+            return self.leftdataArray.count
         }
       else {
-            return rightdataArray.count+10
+            return rightdataArray.count
         }
     }
 
@@ -57,7 +84,7 @@ class FilterViewController: UIViewController , UITableViewDelegate , UITableView
             else {
                 
                 let tableviewcell = tableView.dequeueReusableCell(withIdentifier: "RightTableViewCell") as! RightTableViewCell
-                tableviewcell.textLabel?.text = rightdataArray[selectedleftindex] as? String
+                tableviewcell.textLabel?.text = rightdataArray[indexPath.row]["name"] as? String
                 tableviewcell.tintColor = UIColor.purple
                 return tableviewcell
             }
@@ -82,6 +109,7 @@ class FilterViewController: UIViewController , UITableViewDelegate , UITableView
         if tableView == leftTableView {
             
             selectedleftindex = indexPath.row
+            rightdataArray = filtermodelObjects.dictionary![leftdataArray[selectedleftindex]]!
             selectedrighttindexs = NSMutableArray()
             preselectedrighttindexs = NSMutableArray()
             if selectedindexs[selectedleftindex] != nil {
@@ -98,6 +126,7 @@ class FilterViewController: UIViewController , UITableViewDelegate , UITableView
             print(" selectedrighttindexs:  ",selectedrighttindexs )
             print(" selectedindexs:  ",selectedindexs )
             }
+           
     }
     }
     func tableView(_ tableView: UITableView,didDeselectRowAt  indexPath: IndexPath) {
