@@ -13,6 +13,7 @@ class FirstTableViewCell: UITableViewCell {
     @IBOutlet weak var Btn: UIButton!
     
     @IBOutlet var lblTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
