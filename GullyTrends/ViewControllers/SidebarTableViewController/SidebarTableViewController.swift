@@ -131,18 +131,24 @@ extension SidebarTableViewController: UITableViewDelegate, UITableViewDataSource
         }
     }
 
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        // NSString str=[NSString stringWithFormat:@"   %@",[self.sectionNames objectAtIndex:section]];
-        if ((sectionNames?.count) != nil) {
-            return "\(sectionNames?[section] ?? "")"
-        }
-        return ""
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        // NSString str=[NSString stringWithFormat:@"   %@",[self.sectionNames objectAtIndex:section]];
+//        if ((sectionNames?.count) != nil) {
+//            return "\(sectionNames?[section] ?? "")"
+//        }
+//        return ""
+//    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
     }
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as? UITableViewHeaderFooterView
         header?.contentView.backgroundColor = UIColor(red: 80.0 / 255.0, green: 24 / 255.0, blue: 133 / 255.0, alpha: 1.0)
 
-        header?.textLabel?.textColor = UIColor.white
+        header?.textLabel?.textColor = .white
+        let label = UILabel()
+        label.textColor = .white
+
         if section <= 6 {
             let viewWithTag = self.view.viewWithTag(kHeaderSectionTag + section) as? UIImageView
 
@@ -153,8 +159,15 @@ extension SidebarTableViewController: UITableViewDelegate, UITableViewDataSource
             theImageView.image = UIImage(named: sectionimages?[section] ?? "")
             theImageView.tag = kHeaderSectionTag + section
             theImageView.contentMode = .scaleAspectFit
+            label.frame = CGRect.init(x: 40, y: 13, width: UIScreen.main.bounds.width - 25, height: 16)
             header?.addSubview(theImageView)
+        } else {
+        label.frame = CGRect.init(x: 20, y: 13, width: UIScreen.main.bounds.width - 25, height: 16)
         }
+        if ((sectionNames?.count) != nil) {
+            label.text = "\(sectionNames?[section] ?? "")"
+        }
+        header?.addSubview(label)
 
         //let searchstring = header?.textLabel?.text?.replacingOccurrences(of: "         ", with: "")
         //if !(onlySectionmenuitems?.contains(searchstring ?? "") ?? false) {
@@ -169,15 +182,17 @@ extension SidebarTableViewController: UITableViewDelegate, UITableViewDataSource
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "title", for: indexPath) as! SideMenuViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: SideMenuViewCell.reuseIdentifier, for: indexPath) as! SideMenuViewCell
         let section = sectionItems?[indexPath.section]
         cell.configure(text: section?[indexPath.row] ?? "")
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        selectedrow = sectionNames[indexPath.row]
-//        performSegue(withIdentifier: "segueID", sender: self)
+        if indexPath.section <= 6 {
+            let aVC = SearchProductVM.load(from: STORYBOARD.Main)
+            self.navigationController?.pushViewController(aVC!, animated: true)
+        }
     }
     
     @objc func sectionHeaderWasTouched(_ sender: UITapGestureRecognizer?) {

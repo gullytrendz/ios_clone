@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -609,8 +609,8 @@
         <!--Menu View Controller-->
         <scene sceneID="EDl-71-Ti2">
             <objects>
-                <tableViewController storyboardIdentifier="SidebarTableViewController" title="Menu View Controller" id="x2r-rU-PsL" customClass="SidebarTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="FPA-C9-aqA">
+                <tableViewController storyboardIdentifier="SidebarTableViewController" title="Menu View Controller" id="x2r-rU-PsL" customClass="SidebarTableViewController" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="41" sectionHeaderHeight="22" sectionFooterHeight="22" id="FPA-C9-aqA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -650,29 +650,15 @@
                             <color key="backgroundColor" red="0.30392920970916748" green="0.092974431812763214" blue="0.51002025604248047" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="title" id="5PA-zg-NkQ">
-                                <rect key="frame" x="0.0" y="151" width="375" height="44"/>
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellIdentifier" rowHeight="50" id="YpZ-gV-UhS" customClass="SideMenuViewCell" customModule="GullyTrends" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="151" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5PA-zg-NkQ" id="yOb-Sh-twj">
-                                    <rect key="frame" x="0.0" y="0.0" width="348" height="44"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YpZ-gV-UhS" id="lV2-G2-Gvs">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmC-b8-tgK">
-                                            <rect key="frame" x="12" y="11" width="200" height="18"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="200" id="HXK-TI-5yP"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
-                                            <color key="textColor" red="0.3333333432674408" green="0.3333333432674408" blue="0.3333333432674408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="bmC-b8-tgK" firstAttribute="leading" secondItem="yOb-Sh-twj" secondAttribute="leadingMargin" constant="-4" id="PBv-hd-yqj"/>
-                                        <constraint firstItem="bmC-b8-tgK" firstAttribute="top" secondItem="yOb-Sh-twj" secondAttribute="topMargin" id="vfi-re-eVf"/>
-                                        <constraint firstItem="bmC-b8-tgK" firstAttribute="centerY" secondItem="yOb-Sh-twj" secondAttribute="centerY" constant="-2" id="wAt-4i-h6j"/>
-                                    </constraints>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.30805587769999998" green="0.059893630449999999" blue="0.51811408999999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -681,12 +667,12 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="tableView" destination="FPA-C9-aqA" id="1qb-Yu-ZqL"/>
+                        <outlet property="sideMenuTableView" destination="FPA-C9-aqA" id="1Y2-IH-md8"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QCz-Kj-4H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="-778"/>
+            <point key="canvasLocation" x="1725.5999999999999" y="-955.77211394302856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cWg-6b-WRA">
@@ -727,7 +713,7 @@
         <!--Shirts-->
         <scene sceneID="cab-KB-qTn">
             <objects>
-                <viewController storyboardIdentifier="SearchProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Ns-Vx-Zdu" customClass="SearchProductViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchProductVM" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Ns-Vx-Zdu" customClass="SearchProductVM" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rzQ-D2-8Qb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -835,7 +821,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productCell" id="xDH-fy-hGk" customClass="ProductCollectionViewCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="productCell" id="xDH-fy-hGk" customClass="ProductCell" customModule="GullyTrends" customModuleProvider="target">
                                         <rect key="frame" x="88.5" y="0.0" width="198" height="321"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -892,12 +878,12 @@
                                             <constraint firstItem="1cK-GL-wmn" firstAttribute="centerY" secondItem="bEx-2a-nvz" secondAttribute="centerY" id="z9i-5c-o8k"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="productDiscountDescriptionLabel" destination="1cK-GL-wmn" id="6Sx-f4-T1h"/>
-                                            <outlet property="productImage" destination="vSd-x4-IBg" id="B53-GJ-7SH"/>
-                                            <outlet property="productMrpFareLabel" destination="gOW-L9-yTi" id="ISb-ov-9do"/>
-                                            <outlet property="productSellingFareLabel" destination="bEx-2a-nvz" id="8wO-k4-x0I"/>
-                                            <outlet property="productTitleLabel" destination="Raf-8W-YUG" id="egz-IJ-gsR"/>
-                                            <segue destination="ol1-bo-zp7" kind="show" id="ran-D6-Ir8"/>
+                                            <outlet property="imageView" destination="vSd-x4-IBg" id="RYw-Ry-0Tp"/>
+                                            <outlet property="offerPercentage" destination="1cK-GL-wmn" id="lHM-4c-cDz"/>
+                                            <outlet property="offerPriceLabel" destination="bEx-2a-nvz" id="ECY-E2-JdD"/>
+                                            <outlet property="originalPriceLabel" destination="gOW-L9-yTi" id="dmw-Wu-XR6"/>
+                                            <outlet property="productName" destination="Raf-8W-YUG" id="IrF-Xs-ftd"/>
+                                            <segue destination="ol1-bo-zp7" kind="push" id="yUf-61-sOe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -922,9 +908,6 @@
                     <navigationItem key="navigationItem" title="Shirts" id="678-hH-Yvf">
                         <barButtonItem key="leftBarButtonItem" image="back-arrow" id="epJ-IE-Pcc">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="backAction:" destination="2Ns-Vx-Zdu" id="78y-af-tWK"/>
-                            </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem image="cart-icon" id="C4i-R9-mRb">
@@ -937,17 +920,17 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="productsCollectionView" destination="g0z-jT-Phh" id="yXD-5k-rmi"/>
+                        <outlet property="productCollectionView" destination="g0z-jT-Phh" id="j8P-pf-z1k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2j-oQ-H0a" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3316" y="-792.05397301349331"/>
+            <point key="canvasLocation" x="3353" y="-724"/>
         </scene>
         <!--Product detail-->
         <scene sceneID="wt2-YM-5o9">
             <objects>
-                <viewController storyboardIdentifier="ProductDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ol1-bo-zp7" customClass="ProductDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ol1-bo-zp7" customClass="ProductDetailsVM" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KCs-ze-XGG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1256"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1741,7 +1724,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4116.8000000000002" y="-748.42578710644682"/>
+            <point key="canvasLocation" x="4027" y="-760"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vTp-jp-gI7">
@@ -1788,11 +1771,11 @@
             <objects>
                 <viewController storyboardIdentifier="MyCartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U8B-gV-0pb" customClass="MyCartViewController" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Qv-A9-O20">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYQ-Km-Uj9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGy-6z-UI8">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -2983,6 +2966,6 @@
         <image name="wishlist-icon" width="20" height="18.5"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dbB-YF-GQg"/>
+        <segue reference="neJ-6q-Unm"/>
     </inferredMetricsTieBreakers>
 </document>

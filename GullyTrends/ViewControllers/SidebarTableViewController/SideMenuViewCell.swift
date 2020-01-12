@@ -9,7 +9,7 @@
 import UIKit
 
 class SideMenuViewCell: UITableViewCell {
-    static let reuseIdentifier = "title"
+    static let reuseIdentifier = "cellIdentifier"
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +23,7 @@ class SideMenuViewCell: UITableViewCell {
     func configure(text: String) {
         self.contentView.backgroundColor = UIColor(red: 80.0 / 255.0, green: 24 / 255.0, blue: 133 / 255.0, alpha: 1.0)
         self.textLabel?.textColor = UIColor.white
-        self.textLabel?.text = "\(            text)"
+        self.textLabel?.text = "           " + text
     }
     
 }
