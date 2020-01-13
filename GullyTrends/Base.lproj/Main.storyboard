@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="5IY-Hp-MWf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,7 +38,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-icons" translatesAutoresizingMaskIntoConstraints="NO" id="0jj-69-nuG">
-                                <rect key="frame" x="0.0" y="44" width="375" height="657.00000000000011"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="657"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="hbC-sK-YYg">
                                 <rect key="frame" x="62.5" y="155" width="250" height="100"/>
@@ -256,7 +256,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTg-io-wen">
-                                <rect key="frame" x="280.5" y="627" width="58.5" height="22"/>
+                                <rect key="frame" x="267" y="619" width="72" height="30"/>
                                 <state key="normal" title="  Skip" image="skip-icon"/>
                                 <connections>
                                     <action selector="tapOnSkip" destination="5Y3-1T-yqh" eventType="touchUpInside" id="vEw-wy-Hkw"/>
@@ -325,6 +325,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="513" y="39"/>
+        </scene>
+        <!--Side Bar View Controller-->
+        <scene sceneID="NkQ-O9-ohW">
+            <objects>
+                <viewController storyboardIdentifier="SideBarViewController" id="pTj-jv-5sg" customClass="SideBarViewController" customModule="GullyTrends" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dHL-4d-e5j"/>
+                        <viewControllerLayoutGuide type="bottom" id="L9V-K5-V0G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TA7-T2-40D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PWu-iF-zwv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pTj-jv-5sg" id="4Qp-jz-Dgl"/>
+                                    <outlet property="delegate" destination="pTj-jv-5sg" id="so2-gB-jsk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PWu-iF-zwv" firstAttribute="top" secondItem="dHL-4d-e5j" secondAttribute="bottom" constant="20" id="0sF-cI-zFz"/>
+                            <constraint firstItem="L9V-K5-V0G" firstAttribute="top" secondItem="PWu-iF-zwv" secondAttribute="bottom" id="Dwc-9O-IXG"/>
+                            <constraint firstAttribute="trailing" secondItem="PWu-iF-zwv" secondAttribute="trailing" id="Kc9-Qi-J7d"/>
+                            <constraint firstItem="PWu-iF-zwv" firstAttribute="leading" secondItem="TA7-T2-40D" secondAttribute="leading" id="jJe-nc-yRR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listTableView" destination="PWu-iF-zwv" id="x4x-ZS-f2R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsV-F1-qjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="703.89805097451278"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="kgq-ty-htl">
@@ -2937,7 +2974,7 @@
         <image name="bg-icons" width="320" height="569"/>
         <image name="book-tailor" width="27" height="22.5"/>
         <image name="cart-bag-icon" width="19" height="22.5"/>
-        <image name="cart-icon" width="17" height="20.5"/>
+        <image name="cart-icon" width="18.5" height="23"/>
         <image name="checked.png" width="24.5" height="24.5"/>
         <image name="fb-btn" width="109" height="56"/>
         <image name="filter-icon" width="14" height="9"/>
@@ -2945,14 +2982,14 @@
         <image name="girl" width="42" height="42"/>
         <image name="google-btn" width="110" height="56"/>
         <image name="location-icon" width="13.5" height="19"/>
-        <image name="logo" width="142" height="68"/>
+        <image name="logo" width="90.5" height="44"/>
         <image name="love-icon" width="13.5" height="12"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="menu" width="22" height="22"/>
         <image name="menu-icon" width="22" height="15"/>
         <image name="menu_cart-icon" width="18.5" height="23"/>
         <image name="menu_wishlist-icon" width="18" height="24"/>
-        <image name="search-icon" width="12.5" height="18"/>
+        <image name="search-icon" width="8.5" height="11.5"/>
         <image name="seller-name-link-arrow" width="12" height="7"/>
         <image name="seller-name-star" width="6.5" height="6"/>
         <image name="sign-in-btn" width="222" height="54.5"/>

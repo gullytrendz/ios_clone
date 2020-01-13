@@ -15,9 +15,7 @@ class SideMenuVM {
     do {
       let jsonData = try Data(contentsOf: url!)
       let decoder = JSONDecoder()
-      let jsonModel = try decoder.decode([SideMenuModel].self, from: jsonData)
-      
-      
+      let jsonModel = try decoder.decode([SideMenuModel].self, from: jsonData)      
       return jsonModel
     }
     catch {

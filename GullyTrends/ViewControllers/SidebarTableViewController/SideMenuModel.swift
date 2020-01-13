@@ -9,13 +9,14 @@
 import UIKit
 
 struct SideMenuModel : Codable {
-  let name : String?
-  let icon : String?
-
+  var name : String?
+  var icon : String?
+  var list: [MenuModel]?
+  
   enum CodingKeys: String, CodingKey {
-
     case name = "name"
     case icon = "icon"
+    case list = "list"
   }
 
 }

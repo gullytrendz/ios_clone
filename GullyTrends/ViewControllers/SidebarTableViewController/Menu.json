@@ -1,46 +1,57 @@
 [
   {
     "name": "Men's",
-    "icon": "mens-icon"
+    "icon": "mens-icon",
+    "list": []
   },
   {
     "name": "Women's",
-    "icon": "womens-icon"
+    "icon": "womens-icon",
+    "list": []
   },
   {
     "name": "Kids",
-    "icon": "kids-icon"
+    "icon": "kids-icon",
+    "list": []
   },
   {
     "name": "Designer Studios",
-    "icon": "designer-icon"
+    "icon": "designer-icon",
+    "list": []
   },
   {
     "name": "Home Shopping",
-    "icon": "menu_home-shopping"
+    "icon": "menu_home-shopping",
+    "list": []
   },
   {
     "name": "Sell On Gully",
-    "icon": "menu_sell-on-gully-icon"
+    "icon": "menu_sell-on-gully-icon",
+    "list": []
   },
   {
     "name": "Buy Wholesale",
-    "icon": "menu_buy-wholesale-icon"
+    "icon": "menu_buy-wholesale-icon",
+    "list": []
   },
   {
     "name": "Customer Care",
-    "icon": ""
+    "icon": "",
+    "list": []
   },
   {
     "name": "Return Policy",
-    "icon": ""
+    "icon": "",
+    "list": []
   },
   {
     "name": "FAQS",
-    "icon": ""
+    "icon": "",
+    "list": []
   },
   {
     "name": "About & Policies",
-    "icon": ""
+    "icon": "",
+    "list": []
   }
 ]

@@ -25,7 +25,7 @@ class MenuVM {
     //Query Object
     var queriesObject = Queries()
     queriesObject.selectionKeys = [QueryTypes.SelectKeys: selectKeyArray,
-                           QueryTypes.IncludeKeys: includeKeyArray]
+                                   QueryTypes.IncludeKeys: includeKeyArray]
     
     //Calling request
     ParseManger.queryWithClass(Constants.ClassNames.K_SETTINGS,
@@ -37,7 +37,9 @@ class MenuVM {
     
   }
   
-  static func getMenuList(array: [PFObject]?, _ menuCompletionHandler: @escaping (_ menuObjects: [String: [MenuModel]]) -> Void) {
+  static func getMenuList(array: [PFObject]?, _ menuCompletionHandler: @escaping (_ menuObjects: [SideMenuModel]) -> Void) {
+    
+    var menuData: [SideMenuModel] = SideMenuVM.getMenuData()
     
     //Filter results only menu types Eg: Men, Women, Kids
     let resultsArray = array?.filter({
@@ -47,26 +49,33 @@ class MenuVM {
       return type.lowercased() == Constants.Settings.menu
     })
     
-    var menuDict = [String: [MenuModel]]()
-    
     //Based on menu list fetching sub array data with proper names
     if let lists = resultsArray {
       for object in lists {
         var modelArray = [MenuModel]()
         if let childArray = object[Constants.Settings.child] as? [PFObject] {
           for menuObject in childArray {
-            var model = MenuModel()
-            model.name = menuObject[Constants.Settings.name] as? String
-            model.objId = menuObject.objectId
+            let model = MenuModel(objId: menuObject.objectId, name: menuObject[Constants.Settings.name] as? String)
             modelArray.append(model)
           }
         }
-        if let typename = object[Constants.Settings.name] as? String {
-          menuDict[typename] = modelArray
+        if var typename = object[Constants.Settings.name] as? String {
+          switch typename {
+          case "Men":
+            typename = "Men's"
+          case "Women":
+            typename = "Women's"
+          default:
+            break
+          }
+          
+          if let row = menuData.firstIndex(where: {$0.name == typename}) {
+            menuData[row].list = modelArray
+          }
         }
       }
     }
-    menuCompletionHandler(menuDict)
+    menuCompletionHandler(menuData)
   }
   
 }

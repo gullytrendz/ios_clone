@@ -8,7 +8,12 @@
 
 import UIKit
 
-struct MenuModel {
+struct MenuModel: Codable {
   var objId: String?
   var name: String?
+  
+  enum CodingKeys: String, CodingKey {
+    case objId = "objId"
+    case name = "name"
+  }
 }
